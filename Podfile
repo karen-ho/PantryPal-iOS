@@ -8,6 +8,7 @@ target 'PantryPal-iOS' do
   pod 'Moya', '~> 11.0'
   pod 'Realm', '~> 3.11'
   pod 'Kingfisher'
+  pod 'Marshal'
 
   # Pods for PantryPal-iOS
 
