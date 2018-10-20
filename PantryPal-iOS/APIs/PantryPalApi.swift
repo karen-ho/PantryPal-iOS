@@ -12,15 +12,24 @@ import Moya
 enum PantryPalApi {
     // pools
     case getPools()
+    case getPool(id: String)
+    case joinPool(id: String, userId: String)
+    case leavePool(id: String, userId: String)
 }
 
-extension PantryPalApi {
-    var baseURL: URL { return URL(string: "")! }
+extension PantryPalApi: TargetType {
+    var baseURL: URL { return URL(string: "https://pantrypal2018.herokuapp.com")! }
     
     var path: String {
         switch self {
         case .getPools:
             return "/pool"
+        case .getPool(let id):
+            return "/pool/\(id)"
+        case .joinPool(let id, let userId):
+            return "/pool/\(id)/user/\(userId)"
+        case .leavePool(let id, let userId):
+            return "/pool/\(id)/user/\(userId)"
         }
     }
     
@@ -28,12 +37,24 @@ extension PantryPalApi {
         switch self {
         case .getPools:
             return .get
+        case .getPool:
+            return .get
+        case .joinPool:
+            return .post
+        case .leavePool:
+            return .delete
         }
     }
     
     var task: Task {
         switch self {
         case .getPools:
+            return .requestPlain
+        case .getPool:
+            return .requestPlain
+        case .joinPool:
+            return .requestPlain
+        case .leavePool:
             return .requestPlain
         }
     }
@@ -43,6 +64,15 @@ extension PantryPalApi {
         case .getPools:
             return """
             """.data(using: String.Encoding.utf8)!
+        case .getPool:
+            return """
+            """.data(using: String.Encoding.utf8)!
+        case .joinPool:
+            return """
+            """.data(using: String.Encoding.utf8)!
+        case .leavePool:
+            return """
+            """.data(using: String.Encoding.utf8)!  
         }
     }
 }
