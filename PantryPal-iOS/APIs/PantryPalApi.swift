@@ -11,7 +11,7 @@ import Moya
 
 enum PantryPalApi {
     // pools
-    case getPools()
+    case getPools(latitude: Double, longitude: Double)
     case getPool(id: String)
     case joinPool(id: String, userId: String)
     case leavePool(id: String, userId: String)
@@ -48,8 +48,8 @@ extension PantryPalApi: TargetType {
     
     var task: Task {
         switch self {
-        case .getPools:
-            return .requestPlain
+        case .getPools(let latitude, let longitude):
+            return .requestParameters(parameters: ["latitude": latitude, "longitude": longitude], encoding: URLEncoding.queryString)
         case .getPool:
             return .requestPlain
         case .joinPool:
@@ -59,7 +59,7 @@ extension PantryPalApi: TargetType {
         }
     }
     
-    var sampleDate: Data {
+    var sampleData: Data {
         switch self {
         case .getPools:
             return """
@@ -74,6 +74,10 @@ extension PantryPalApi: TargetType {
             return """
             """.data(using: String.Encoding.utf8)!  
         }
+    }
+    
+    var headers: [String : String]? {
+        return nil
     }
 }
 

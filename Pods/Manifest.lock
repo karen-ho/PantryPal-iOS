@@ -7,16 +7,18 @@ PODS:
   - Moya/Core (11.0.2):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
-  - Realm (3.11.1):
-    - Realm/Headers (= 3.11.1)
-  - Realm/Headers (3.11.1)
+  - Realm (3.11.0):
+    - Realm/Headers (= 3.11.0)
+  - Realm/Headers (3.11.0)
+  - RealmSwift (3.11.0):
+    - Realm (= 3.11.0)
   - Result (3.2.4)
 
 DEPENDENCIES:
   - Kingfisher
   - Marshal
-  - Moya
-  - Realm
+  - Moya (~> 11.0)
+  - RealmSwift (= 3.11.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -25,6 +27,7 @@ SPEC REPOS:
     - Marshal
     - Moya
     - Realm
+    - RealmSwift
     - Result
 
 SPEC CHECKSUMS:
@@ -32,9 +35,10 @@ SPEC CHECKSUMS:
   Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
   Marshal: ef480864a6af10a63f67be7e55bb5d8fe67a16d9
   Moya: a725035953bc1c0eb1be505ab903984501d82440
-  Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
+  Realm: 92f09a102692b96a9a10e9617f214f15c5ab85fc
+  RealmSwift: 5f0481cd658bb751c509314b964a35eaa264d2cf
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
 
-PODFILE CHECKSUM: 2bb85fcb9401a6da7d642efda293b1037f0ae407
+PODFILE CHECKSUM: febc111f4cc65ee37413eefaa9b758370766aa12
 
 COCOAPODS: 1.5.3
