@@ -18,7 +18,7 @@ class PoolApi {
         self.provider = provider
     }
     
-    func getPools() {
+    func getPools(completion: @escaping ([PoolResource])  -> Void) {
         
     }
 }

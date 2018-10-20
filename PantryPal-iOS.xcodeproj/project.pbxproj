@@ -20,6 +20,7 @@
 		9C605CE3217BB0460000C100 /* PoolApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C605CE2217BB0460000C100 /* PoolApi.swift */; };
 		9C605CE5217BB0E00000C100 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C605CE4217BB0E00000C100 /* Config.swift */; };
 		9C605CE7217BB1890000C100 /* PoolResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C605CE6217BB1890000C100 /* PoolResource.swift */; };
+		9C605CEA217BB76C0000C100 /* Response+Marshal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C605CE9217BB76C0000C100 /* Response+Marshal.swift */; };
 		FFA279A6CF6A077C2451A387 /* Pods_PantryPal_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBEC886A842FEB051BEFACE1 /* Pods_PantryPal_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		9C605CE2217BB0460000C100 /* PoolApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolApi.swift; sourceTree = "<group>"; };
 		9C605CE4217BB0E00000C100 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		9C605CE6217BB1890000C100 /* PoolResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolResource.swift; sourceTree = "<group>"; };
+		9C605CE9217BB76C0000C100 /* Response+Marshal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response+Marshal.swift"; sourceTree = "<group>"; };
 		A9AF69A521B76187A474326E /* Pods-PantryPal-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantryPal-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PantryPal-iOSTests/Pods-PantryPal-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC84C13089E91749363A9237 /* Pods-PantryPal-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantryPal-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PantryPal-iOS/Pods-PantryPal-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		FBEC886A842FEB051BEFACE1 /* Pods_PantryPal_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PantryPal_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 		9C249E81217BA88D00121E50 /* PantryPal-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				9C605CE8217BB74D0000C100 /* Extensions */,
 				9C249EB3217BAAE000121E50 /* Resources */,
 				9C249EB2217BAABC00121E50 /* APIs */,
 				9C249EB1217BAAB800121E50 /* Managers */,
@@ -207,6 +210,14 @@
 				9C605CE6217BB1890000C100 /* PoolResource.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9C605CE8217BB74D0000C100 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9C605CE9217BB76C0000C100 /* Response+Marshal.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,6 +443,7 @@
 				9C605CE3217BB0460000C100 /* PoolApi.swift in Sources */,
 				9C249E85217BA88D00121E50 /* ViewController.swift in Sources */,
 				9C605CE5217BB0E00000C100 /* Config.swift in Sources */,
+				9C605CEA217BB76C0000C100 /* Response+Marshal.swift in Sources */,
 				9C249E83217BA88D00121E50 /* AppDelegate.swift in Sources */,
 				9C249EB5217BAAF200121E50 /* PantryPalApi.swift in Sources */,
 				9C605CE7217BB1890000C100 /* PoolResource.swift in Sources */,
