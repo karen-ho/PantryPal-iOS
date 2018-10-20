@@ -5,8 +5,8 @@ target 'PantryPal-iOS' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'Moya', '~> 11.0'
-  pod 'Realm', '~> 3.11'
+  pod 'Moya'
+  pod 'Realm'
   pod 'Kingfisher'
   pod 'Marshal'
 

@@ -16,6 +16,7 @@
 		9C249E8D217BA88E00121E50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C249E8B217BA88E00121E50 /* LaunchScreen.storyboard */; };
 		9C249E98217BA88E00121E50 /* PantryPal_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C249E97217BA88E00121E50 /* PantryPal_iOSTests.swift */; };
 		9C249EA3217BA88E00121E50 /* PantryPal_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C249EA2217BA88E00121E50 /* PantryPal_iOSUITests.swift */; };
+		9C249EB5217BAAF200121E50 /* PantryPalApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C249EB4217BAAF200121E50 /* PantryPalApi.swift */; };
 		FFA279A6CF6A077C2451A387 /* Pods_PantryPal_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBEC886A842FEB051BEFACE1 /* Pods_PantryPal_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		9C249E9E217BA88E00121E50 /* PantryPal-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PantryPal-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C249EA2217BA88E00121E50 /* PantryPal_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryPal_iOSUITests.swift; sourceTree = "<group>"; };
 		9C249EA4217BA88E00121E50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C249EB4217BAAF200121E50 /* PantryPalApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryPalApi.swift; sourceTree = "<group>"; };
 		A9AF69A521B76187A474326E /* Pods-PantryPal-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantryPal-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PantryPal-iOSTests/Pods-PantryPal-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC84C13089E91749363A9237 /* Pods-PantryPal-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantryPal-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PantryPal-iOS/Pods-PantryPal-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		FBEC886A842FEB051BEFACE1 /* Pods_PantryPal_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PantryPal_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,8 +139,11 @@
 		9C249E81217BA88D00121E50 /* PantryPal-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				9C249EB3217BAAE000121E50 /* Resources */,
+				9C249EB2217BAABC00121E50 /* APIs */,
+				9C249EB1217BAAB800121E50 /* Managers */,
+				9C249EB0217BAAA900121E50 /* Views */,
 				9C249E82217BA88D00121E50 /* AppDelegate.swift */,
-				9C249E84217BA88D00121E50 /* ViewController.swift */,
 				9C249E86217BA88D00121E50 /* Main.storyboard */,
 				9C249E89217BA88E00121E50 /* Assets.xcassets */,
 				9C249E8B217BA88E00121E50 /* LaunchScreen.storyboard */,
@@ -163,6 +168,36 @@
 				9C249EA4217BA88E00121E50 /* Info.plist */,
 			);
 			path = "PantryPal-iOSUITests";
+			sourceTree = "<group>";
+		};
+		9C249EB0217BAAA900121E50 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9C249E84217BA88D00121E50 /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9C249EB1217BAAB800121E50 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		9C249EB2217BAABC00121E50 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				9C249EB4217BAAF200121E50 /* PantryPalApi.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		9C249EB3217BAAE000121E50 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +422,7 @@
 			files = (
 				9C249E85217BA88D00121E50 /* ViewController.swift in Sources */,
 				9C249E83217BA88D00121E50 /* AppDelegate.swift in Sources */,
+				9C249EB5217BAAF200121E50 /* PantryPalApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +599,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 527UAJG3X4;
 				INFOPLIST_FILE = "PantryPal-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -581,6 +618,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 527UAJG3X4;
 				INFOPLIST_FILE = "PantryPal-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
