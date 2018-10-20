@@ -14,11 +14,13 @@ class PoolResource: Unmarshaling {
     let latitude: Double
     let longitude: Double
     let userIds: [String]
+    let tiers: [TierResource]
     
     required init(object: MarshaledObject) throws {
         plu = try object.value(for: "plu")
         latitude = try object.value(for: "latitude")
         longitude = try object.value(for: "longitude")
         userIds = try object.value(for: "userIds")
+        tiers = try object.value(for: "tiers")
     }
 }

@@ -9,6 +9,8 @@ target 'PantryPal-iOS' do
   pod 'RealmSwift', '3.11.0'
   pod 'Kingfisher'
   pod 'Marshal'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
 
   # Pods for PantryPal-iOS
 
