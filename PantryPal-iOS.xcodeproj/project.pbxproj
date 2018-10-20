@@ -1,0 +1,718 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		339EEBFC4BF0B02A66F25AB0 /* Pods_PantryPal_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E01697E6745EDE3C05C73AE /* Pods_PantryPal_iOSUITests.framework */; };
+		413EC83FA6C049FF2D4DD5C7 /* Pods_PantryPal_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCD04BABFAADE0B990DED69 /* Pods_PantryPal_iOSTests.framework */; };
+		9C249E83217BA88D00121E50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C249E82217BA88D00121E50 /* AppDelegate.swift */; };
+		9C249E85217BA88D00121E50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C249E84217BA88D00121E50 /* ViewController.swift */; };
+		9C249E88217BA88D00121E50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C249E86217BA88D00121E50 /* Main.storyboard */; };
+		9C249E8A217BA88E00121E50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C249E89217BA88E00121E50 /* Assets.xcassets */; };
+		9C249E8D217BA88E00121E50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C249E8B217BA88E00121E50 /* LaunchScreen.storyboard */; };
+		9C249E98217BA88E00121E50 /* PantryPal_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C249E97217BA88E00121E50 /* PantryPal_iOSTests.swift */; };
+		9C249EA3217BA88E00121E50 /* PantryPal_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C249EA2217BA88E00121E50 /* PantryPal_iOSUITests.swift */; };
+		FFA279A6CF6A077C2451A387 /* Pods_PantryPal_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBEC886A842FEB051BEFACE1 /* Pods_PantryPal_iOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C249E94217BA88E00121E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C249E77217BA88D00121E50 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C249E7E217BA88D00121E50;
+			remoteInfo = "PantryPal-iOS";
+		};
+		9C249E9F217BA88E00121E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C249E77217BA88D00121E50 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C249E7E217BA88D00121E50;
+			remoteInfo = "PantryPal-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3556FFA6780D78F1ED091275 /* Pods-PantryPal-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantryPal-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PantryPal-iOSTests/Pods-PantryPal-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		3FCD04BABFAADE0B990DED69 /* Pods_PantryPal_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PantryPal_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45E4A9CC284F3073E7B1EB31 /* Pods-PantryPal-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantryPal-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PantryPal-iOS/Pods-PantryPal-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		5E01697E6745EDE3C05C73AE /* Pods_PantryPal_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PantryPal_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F442C8535FC838E00D4202D /* Pods-PantryPal-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantryPal-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PantryPal-iOSUITests/Pods-PantryPal-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		62FB494479647A8995FFC4C7 /* Pods-PantryPal-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantryPal-iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PantryPal-iOSUITests/Pods-PantryPal-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9C249E7F217BA88D00121E50 /* PantryPal-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PantryPal-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C249E82217BA88D00121E50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9C249E84217BA88D00121E50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9C249E87217BA88D00121E50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C249E89217BA88E00121E50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C249E8C217BA88E00121E50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9C249E8E217BA88E00121E50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C249E93217BA88E00121E50 /* PantryPal-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PantryPal-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C249E97217BA88E00121E50 /* PantryPal_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryPal_iOSTests.swift; sourceTree = "<group>"; };
+		9C249E99217BA88E00121E50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C249E9E217BA88E00121E50 /* PantryPal-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PantryPal-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C249EA2217BA88E00121E50 /* PantryPal_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryPal_iOSUITests.swift; sourceTree = "<group>"; };
+		9C249EA4217BA88E00121E50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9AF69A521B76187A474326E /* Pods-PantryPal-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantryPal-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PantryPal-iOSTests/Pods-PantryPal-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC84C13089E91749363A9237 /* Pods-PantryPal-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantryPal-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PantryPal-iOS/Pods-PantryPal-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		FBEC886A842FEB051BEFACE1 /* Pods_PantryPal_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PantryPal_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C249E7C217BA88D00121E50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFA279A6CF6A077C2451A387 /* Pods_PantryPal_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C249E90217BA88E00121E50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				413EC83FA6C049FF2D4DD5C7 /* Pods_PantryPal_iOSTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C249E9B217BA88E00121E50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				339EEBFC4BF0B02A66F25AB0 /* Pods_PantryPal_iOSUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C5BACD55BD26CADD02E012B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBEC886A842FEB051BEFACE1 /* Pods_PantryPal_iOS.framework */,
+				3FCD04BABFAADE0B990DED69 /* Pods_PantryPal_iOSTests.framework */,
+				5E01697E6745EDE3C05C73AE /* Pods_PantryPal_iOSUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99B5CFC78D425B7AB6083F2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45E4A9CC284F3073E7B1EB31 /* Pods-PantryPal-iOS.debug.xcconfig */,
+				CC84C13089E91749363A9237 /* Pods-PantryPal-iOS.release.xcconfig */,
+				A9AF69A521B76187A474326E /* Pods-PantryPal-iOSTests.debug.xcconfig */,
+				3556FFA6780D78F1ED091275 /* Pods-PantryPal-iOSTests.release.xcconfig */,
+				62FB494479647A8995FFC4C7 /* Pods-PantryPal-iOSUITests.debug.xcconfig */,
+				5F442C8535FC838E00D4202D /* Pods-PantryPal-iOSUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9C249E76217BA88D00121E50 = {
+			isa = PBXGroup;
+			children = (
+				9C249E81217BA88D00121E50 /* PantryPal-iOS */,
+				9C249E96217BA88E00121E50 /* PantryPal-iOSTests */,
+				9C249EA1217BA88E00121E50 /* PantryPal-iOSUITests */,
+				9C249E80217BA88D00121E50 /* Products */,
+				99B5CFC78D425B7AB6083F2E /* Pods */,
+				3C5BACD55BD26CADD02E012B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9C249E80217BA88D00121E50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C249E7F217BA88D00121E50 /* PantryPal-iOS.app */,
+				9C249E93217BA88E00121E50 /* PantryPal-iOSTests.xctest */,
+				9C249E9E217BA88E00121E50 /* PantryPal-iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C249E81217BA88D00121E50 /* PantryPal-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9C249E82217BA88D00121E50 /* AppDelegate.swift */,
+				9C249E84217BA88D00121E50 /* ViewController.swift */,
+				9C249E86217BA88D00121E50 /* Main.storyboard */,
+				9C249E89217BA88E00121E50 /* Assets.xcassets */,
+				9C249E8B217BA88E00121E50 /* LaunchScreen.storyboard */,
+				9C249E8E217BA88E00121E50 /* Info.plist */,
+			);
+			path = "PantryPal-iOS";
+			sourceTree = "<group>";
+		};
+		9C249E96217BA88E00121E50 /* PantryPal-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C249E97217BA88E00121E50 /* PantryPal_iOSTests.swift */,
+				9C249E99217BA88E00121E50 /* Info.plist */,
+			);
+			path = "PantryPal-iOSTests";
+			sourceTree = "<group>";
+		};
+		9C249EA1217BA88E00121E50 /* PantryPal-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9C249EA2217BA88E00121E50 /* PantryPal_iOSUITests.swift */,
+				9C249EA4217BA88E00121E50 /* Info.plist */,
+			);
+			path = "PantryPal-iOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C249E7E217BA88D00121E50 /* PantryPal-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C249EA7217BA88E00121E50 /* Build configuration list for PBXNativeTarget "PantryPal-iOS" */;
+			buildPhases = (
+				D97EC7091A0F37B82669AA1C /* [CP] Check Pods Manifest.lock */,
+				9C249E7B217BA88D00121E50 /* Sources */,
+				9C249E7C217BA88D00121E50 /* Frameworks */,
+				9C249E7D217BA88D00121E50 /* Resources */,
+				63D45DA2CF4AB419C9A1A3D9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PantryPal-iOS";
+			productName = "PantryPal-iOS";
+			productReference = 9C249E7F217BA88D00121E50 /* PantryPal-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C249E92217BA88E00121E50 /* PantryPal-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C249EAA217BA88E00121E50 /* Build configuration list for PBXNativeTarget "PantryPal-iOSTests" */;
+			buildPhases = (
+				5EDC52F34A09E5E9C259B255 /* [CP] Check Pods Manifest.lock */,
+				9C249E8F217BA88E00121E50 /* Sources */,
+				9C249E90217BA88E00121E50 /* Frameworks */,
+				9C249E91217BA88E00121E50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C249E95217BA88E00121E50 /* PBXTargetDependency */,
+			);
+			name = "PantryPal-iOSTests";
+			productName = "PantryPal-iOSTests";
+			productReference = 9C249E93217BA88E00121E50 /* PantryPal-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9C249E9D217BA88E00121E50 /* PantryPal-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C249EAD217BA88E00121E50 /* Build configuration list for PBXNativeTarget "PantryPal-iOSUITests" */;
+			buildPhases = (
+				DC917F584025D17D5928CADE /* [CP] Check Pods Manifest.lock */,
+				9C249E9A217BA88E00121E50 /* Sources */,
+				9C249E9B217BA88E00121E50 /* Frameworks */,
+				9C249E9C217BA88E00121E50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C249EA0217BA88E00121E50 /* PBXTargetDependency */,
+			);
+			name = "PantryPal-iOSUITests";
+			productName = "PantryPal-iOSUITests";
+			productReference = 9C249E9E217BA88E00121E50 /* PantryPal-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C249E77217BA88D00121E50 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Karen Ho";
+				TargetAttributes = {
+					9C249E7E217BA88D00121E50 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					9C249E92217BA88E00121E50 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 9C249E7E217BA88D00121E50;
+					};
+					9C249E9D217BA88E00121E50 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 9C249E7E217BA88D00121E50;
+					};
+				};
+			};
+			buildConfigurationList = 9C249E7A217BA88D00121E50 /* Build configuration list for PBXProject "PantryPal-iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C249E76217BA88D00121E50;
+			productRefGroup = 9C249E80217BA88D00121E50 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C249E7E217BA88D00121E50 /* PantryPal-iOS */,
+				9C249E92217BA88E00121E50 /* PantryPal-iOSTests */,
+				9C249E9D217BA88E00121E50 /* PantryPal-iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C249E7D217BA88D00121E50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C249E8D217BA88E00121E50 /* LaunchScreen.storyboard in Resources */,
+				9C249E8A217BA88E00121E50 /* Assets.xcassets in Resources */,
+				9C249E88217BA88D00121E50 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C249E91217BA88E00121E50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C249E9C217BA88E00121E50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EDC52F34A09E5E9C259B255 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PantryPal-iOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63D45DA2CF4AB419C9A1A3D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PantryPal-iOS/Pods-PantryPal-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PantryPal-iOS/Pods-PantryPal-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D97EC7091A0F37B82669AA1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PantryPal-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC917F584025D17D5928CADE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PantryPal-iOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C249E7B217BA88D00121E50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C249E85217BA88D00121E50 /* ViewController.swift in Sources */,
+				9C249E83217BA88D00121E50 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C249E8F217BA88E00121E50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C249E98217BA88E00121E50 /* PantryPal_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C249E9A217BA88E00121E50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C249EA3217BA88E00121E50 /* PantryPal_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C249E95217BA88E00121E50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C249E7E217BA88D00121E50 /* PantryPal-iOS */;
+			targetProxy = 9C249E94217BA88E00121E50 /* PBXContainerItemProxy */;
+		};
+		9C249EA0217BA88E00121E50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C249E7E217BA88D00121E50 /* PantryPal-iOS */;
+			targetProxy = 9C249E9F217BA88E00121E50 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9C249E86217BA88D00121E50 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C249E87217BA88D00121E50 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9C249E8B217BA88E00121E50 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C249E8C217BA88E00121E50 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C249EA5217BA88E00121E50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9C249EA6217BA88E00121E50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C249EA8217BA88E00121E50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45E4A9CC284F3073E7B1EB31 /* Pods-PantryPal-iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "PantryPal-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DreamTeam.PantryPal-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C249EA9217BA88E00121E50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC84C13089E91749363A9237 /* Pods-PantryPal-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "PantryPal-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DreamTeam.PantryPal-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9C249EAB217BA88E00121E50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9AF69A521B76187A474326E /* Pods-PantryPal-iOSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "PantryPal-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DreamTeam.PantryPal-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PantryPal-iOS.app/PantryPal-iOS";
+			};
+			name = Debug;
+		};
+		9C249EAC217BA88E00121E50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3556FFA6780D78F1ED091275 /* Pods-PantryPal-iOSTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "PantryPal-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DreamTeam.PantryPal-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PantryPal-iOS.app/PantryPal-iOS";
+			};
+			name = Release;
+		};
+		9C249EAE217BA88E00121E50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62FB494479647A8995FFC4C7 /* Pods-PantryPal-iOSUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "PantryPal-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DreamTeam.PantryPal-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PantryPal-iOS";
+			};
+			name = Debug;
+		};
+		9C249EAF217BA88E00121E50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F442C8535FC838E00D4202D /* Pods-PantryPal-iOSUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "PantryPal-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DreamTeam.PantryPal-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PantryPal-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C249E7A217BA88D00121E50 /* Build configuration list for PBXProject "PantryPal-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C249EA5217BA88E00121E50 /* Debug */,
+				9C249EA6217BA88E00121E50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C249EA7217BA88E00121E50 /* Build configuration list for PBXNativeTarget "PantryPal-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C249EA8217BA88E00121E50 /* Debug */,
+				9C249EA9217BA88E00121E50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C249EAA217BA88E00121E50 /* Build configuration list for PBXNativeTarget "PantryPal-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C249EAB217BA88E00121E50 /* Debug */,
+				9C249EAC217BA88E00121E50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C249EAD217BA88E00121E50 /* Build configuration list for PBXNativeTarget "PantryPal-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C249EAE217BA88E00121E50 /* Debug */,
+				9C249EAF217BA88E00121E50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C249E77217BA88D00121E50 /* Project object */;
+}
