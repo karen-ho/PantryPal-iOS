@@ -63,6 +63,25 @@ extension PantryPalApi: TargetType {
         switch self {
         case .getPools:
             return """
+            [{
+                "id": "123",
+                "pluId": "3434",
+                "lat": 32.2243,
+                "long": -117.2453,
+                "tiers": [{"id": "123", "price": 2.33, "threshold": 3}],
+                "userIds": ["2132423"],
+                "start": 135343232,
+                "end": 232323232
+            }, {
+                "id": "124",
+                "pluId": "34324",
+                "lat": 32.2243,
+                "long": -117.2453,
+                "tiers": [{"id": "123", "price": 2.33, "threshold": 3}],
+                "userIds": ["2132423"],
+                "start": 135343232,
+                "end": 232323232
+            }]
             """.data(using: String.Encoding.utf8)!
         case .getPool:
             return """

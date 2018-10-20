@@ -10,17 +10,23 @@ import Foundation
 import Marshal
 
 class PoolResource: Unmarshaling {
+    let id: String
     let plu: String
     let latitude: Double
     let longitude: Double
     let userIds: [String]
     let tiers: [TierResource]
+    let start: Int64
+    let end: Int64
     
     required init(object: MarshaledObject) throws {
-        plu = try object.value(for: "plu")
-        latitude = try object.value(for: "latitude")
-        longitude = try object.value(for: "longitude")
+        id = try object.value(for: "id")
+        plu = try object.value(for: "pluId")
+        latitude = try object.value(for: "lat")
+        longitude = try object.value(for: "long")
         userIds = try object.value(for: "userIds")
         tiers = try object.value(for: "tiers")
+        start = try object.value(for: "start")
+        end = try object.value(for: "end")
     }
 }

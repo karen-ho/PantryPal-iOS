@@ -11,12 +11,16 @@ import CoreLocation
 import UIKit
 
 class HomeViewController: UIViewController {
+    @IBOutlet weak var poolTable: UITableView!
+    
     let locationManager: CLLocationManager = CLLocationManager()
     
     let poolApi: PoolApi = PoolApi.sharedInstance
     
     var locations: [CLLocation] = []
     var processLocationFn: Debouncer?
+    
+    var pools: [PoolResource] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +45,8 @@ class HomeViewController: UIViewController {
         let longitude = location.coordinate.longitude
         
         poolApi.getPools(latitude: latitude, longitude: longitude) { (pools) in
-            
+            self.pools = pools
+            self.poolTable.reloadData()
         }
     }
 }
@@ -104,4 +109,26 @@ extension HomeViewController: CLLocationManagerDelegate {
     func hasRequestedLocationAuthorization() -> Bool {
         return type(of: locationManager).authorizationStatus() != .notDetermined
     }
+}
+
+// MARK: - UITableViewDelegate
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let poolStoryboard = UIStoryboard(name: "PoolDetail", bundle: Bundle(for: self.classForCoder))
+        let poolController = poolStoryboard.instantiateViewController(withIdentifier: "PoolDetailView") as! PoolDetailViewController
+        navigationController?.pushViewController(poolController, animated: true)
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return pools.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+
 }
