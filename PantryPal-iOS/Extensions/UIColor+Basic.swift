@@ -21,4 +21,5 @@ extension UIColor {
     
     static let greenOutline = UIColor(red: 0.16, green: 0.75, blue: 0.18, alpha: 1.0)
     static let greenFill = UIColor(red: 0.75, green: 0.90, blue: 0.75, alpha: 1.0)
+    static let pantryBlue = UIColor(red: 0.08, green: 0.49, blue: 0.78, alpha: 1.0)
 }

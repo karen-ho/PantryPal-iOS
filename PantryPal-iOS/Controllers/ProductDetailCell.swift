@@ -14,6 +14,7 @@ class ProductDetailCell: UITableViewCell {
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var purchasedLabel: UILabel!
     @IBOutlet weak var discountLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     
     @IBOutlet weak var regularPriceLabel: UILabel!
     @IBOutlet weak var middleDiscountLabel: UILabel!
@@ -31,6 +32,13 @@ class ProductDetailCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        let text = "123 Main St."
+        let textRange = NSMakeRange(0, text.count)
+        let attributedText = NSMutableAttributedString(string: text)
+        attributedText.addAttribute(NSAttributedString.Key.underlineStyle , value: NSUnderlineStyle.single.rawValue, range: textRange)
+        // Add other attributes if needed
+        self.addressLabel.attributedText = attributedText
     }
     
     func setProduct(pool: PoolResource) {

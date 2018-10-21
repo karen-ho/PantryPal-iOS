@@ -19,17 +19,17 @@ class TabViewController: UITabBarController {
         let homeStoryboard = UIStoryboard(name: "Home", bundle: Bundle(for: self.classForCoder))
         let homeController = homeStoryboard.instantiateViewController(withIdentifier: "HomeView") as! HomeViewController
         let homeNavController = UINavigationController(rootViewController: homeController)
-        homeNavController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(assetIdentifier: .home), selectedImage: UIImage(assetIdentifier: .home))
+        homeNavController.tabBarItem = UITabBarItem(title: "My Pools", image: UIImage(assetIdentifier: .shop), selectedImage: UIImage(assetIdentifier: .shop))
         
         let searchStoryboard = UIStoryboard(name: "Search", bundle: Bundle(for: self.classForCoder))
         let searchController = searchStoryboard.instantiateViewController(withIdentifier: "SearchView") as! SearchViewController
         let searchNavController = UINavigationController(rootViewController: searchController)
-        searchNavController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(assetIdentifier: .search), selectedImage: UIImage(assetIdentifier: .search))
+        searchNavController.tabBarItem = UITabBarItem(title: "Wallet", image: UIImage(assetIdentifier: .wallet), selectedImage: UIImage(assetIdentifier: .wallet))
         
         let settingStoryboard = UIStoryboard(name: "Setting", bundle: Bundle(for: self.classForCoder))
         let settingController = settingStoryboard.instantiateViewController(withIdentifier: "SettingView") as! SettingViewController
         let settingNavController = UINavigationController(rootViewController: settingController)
-        settingNavController.tabBarItem = UITabBarItem(title: "Account", image: UIImage(assetIdentifier: .setting), selectedImage: UIImage(assetIdentifier: .setting))
+        settingNavController.tabBarItem = UITabBarItem(title: "Account", image: UIImage(assetIdentifier: .account), selectedImage: UIImage(assetIdentifier: .account))
         
         viewControllers = [homeNavController, searchNavController, settingNavController]
     }

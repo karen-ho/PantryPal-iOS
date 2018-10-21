@@ -11,13 +11,14 @@ import UIKit
 
 extension UIImage {
     enum AssetIdentifier: String {
-        case home
         case search
-        case setting
+        case account
         case visa
         case mastercard
         case discover
         case americanexpress
+        case wallet
+        case shop
     }
     
     convenience init!(assetIdentifier: AssetIdentifier) {

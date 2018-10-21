@@ -277,6 +277,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="addressLabel" destination="SkQ-ac-lbp" id="tmJ-zT-rh2"/>
                 <outlet property="barWidth" destination="13F-df-BDG" id="lGG-jO-bjP"/>
                 <outlet property="descriptionLabel" destination="cuj-dw-51v" id="Caf-N8-l3b"/>
                 <outlet property="discountLabel" destination="HNd-Db-GdA" id="SvD-uq-0bi"/>

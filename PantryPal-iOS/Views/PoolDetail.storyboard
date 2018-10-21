@@ -25,20 +25,32 @@
                                     <outlet property="delegate" destination="dTR-1s-mac" id="NWH-s8-KYs"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dij-St-oRt">
-                                <rect key="frame" x="16" y="607" width="343" height="44"/>
-                                <color key="backgroundColor" red="0.082352941176470587" green="0.48627450980392156" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WbK-pg-j5v">
+                                <rect key="frame" x="0.0" y="591" width="375" height="76"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dij-St-oRt">
+                                        <rect key="frame" x="16" y="16" width="343" height="44"/>
+                                        <color key="backgroundColor" red="0.082352941176470587" green="0.48627450980392156" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="5iM-DP-xvA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <state key="normal" title="Join Pool">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="joinPool:" destination="dTR-1s-mac" eventType="touchUpInside" id="jvc-i2-e1D"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="5iM-DP-xvA"/>
+                                    <constraint firstAttribute="bottom" secondItem="dij-St-oRt" secondAttribute="bottom" constant="16" id="21Y-Ls-qCt"/>
+                                    <constraint firstAttribute="height" constant="76" id="Iwc-fm-KJx"/>
+                                    <constraint firstAttribute="trailing" secondItem="dij-St-oRt" secondAttribute="trailing" constant="16" id="W1N-77-dVK"/>
+                                    <constraint firstItem="dij-St-oRt" firstAttribute="leading" secondItem="WbK-pg-j5v" secondAttribute="leading" constant="16" id="tJP-fn-qV5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                <state key="normal" title="Join Pool">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="joinPool:" destination="dTR-1s-mac" eventType="touchUpInside" id="jvc-i2-e1D"/>
-                                </connections>
-                            </button>
+                            </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVj-8f-H4H">
                                 <rect key="frame" x="0.0" y="385" width="375" height="282"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,16 +65,17 @@
                             <constraint firstItem="tav-H3-BII" firstAttribute="leading" secondItem="7ui-Ej-VS8" secondAttribute="leading" id="8YQ-i1-12Z"/>
                             <constraint firstItem="7ui-Ej-VS8" firstAttribute="trailing" secondItem="NVj-8f-H4H" secondAttribute="trailing" id="Gd4-cL-5TO"/>
                             <constraint firstItem="tav-H3-BII" firstAttribute="top" secondItem="zUs-5w-fsH" secondAttribute="top" id="HuH-I8-XRo"/>
-                            <constraint firstItem="dij-St-oRt" firstAttribute="leading" secondItem="7ui-Ej-VS8" secondAttribute="leading" constant="16" id="N9s-f0-TIB"/>
-                            <constraint firstItem="dij-St-oRt" firstAttribute="top" secondItem="tav-H3-BII" secondAttribute="bottom" constant="16" id="NBI-yG-IN7"/>
-                            <constraint firstItem="7ui-Ej-VS8" firstAttribute="bottom" secondItem="dij-St-oRt" secondAttribute="bottom" constant="16" id="anc-sD-MWh"/>
-                            <constraint firstItem="7ui-Ej-VS8" firstAttribute="trailing" secondItem="dij-St-oRt" secondAttribute="trailing" constant="16" id="cYR-jM-mO0"/>
+                            <constraint firstAttribute="bottom" secondItem="WbK-pg-j5v" secondAttribute="bottom" id="QtZ-uK-JRr"/>
+                            <constraint firstItem="WbK-pg-j5v" firstAttribute="trailing" secondItem="7ui-Ej-VS8" secondAttribute="trailing" id="RTG-t9-VB7"/>
                             <constraint firstItem="7ui-Ej-VS8" firstAttribute="trailing" secondItem="tav-H3-BII" secondAttribute="trailing" id="l1g-eK-7cP"/>
                             <constraint firstItem="NVj-8f-H4H" firstAttribute="leading" secondItem="7ui-Ej-VS8" secondAttribute="leading" id="ndi-tm-kHc"/>
+                            <constraint firstItem="WbK-pg-j5v" firstAttribute="leading" secondItem="zUs-5w-fsH" secondAttribute="leading" id="nnq-Vp-4jE"/>
+                            <constraint firstItem="WbK-pg-j5v" firstAttribute="top" secondItem="tav-H3-BII" secondAttribute="bottom" id="sbY-B5-Yes"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7ui-Ej-VS8"/>
                     </view>
                     <connections>
+                        <outlet property="joinPoolButton" destination="dij-St-oRt" id="dl5-cC-X2o"/>
                         <outlet property="paymentView" destination="NVj-8f-H4H" id="Wjb-l1-ko1"/>
                         <outlet property="productTable" destination="tav-H3-BII" id="GBa-MS-ngI"/>
                     </connections>

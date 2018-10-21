@@ -13,6 +13,7 @@ class PoolDetailViewController: UIViewController {
     
     @IBOutlet weak var paymentView: UIView!
     @IBOutlet weak var productTable: UITableView!
+    @IBOutlet weak var joinPoolButton: UIButton!
     
     var rowHeight: CGFloat = 770.0
     
@@ -33,6 +34,29 @@ class PoolDetailViewController: UIViewController {
         
         let productDetailNib = UINib(nibName: "ProductDetailCell", bundle: Bundle(for: self.classForCoder))
         productTable.register(productDetailNib, forCellReuseIdentifier: "productDetail")
+        
+        let tiers = pool.tiers.sorted(by: {$0.threshold < $1.threshold})
+        let tier1 = tiers[0]
+        let tier2 = tiers[1]
+        let tier3 = tiers[2]
+        
+        var currentTier = 1
+        
+        if tier2.threshold < pool.totalUnits {
+            currentTier = 2
+        } else if tier3.threshold <= pool.totalUnits {
+            currentTier = 3
+        }
+        
+        if currentTier == 2 {
+            let middleDiscount = (tier1.price - tier2.price) / tier1.price * 100
+            let middleOff = String(format: "%.0f", middleDiscount) + "%"
+            joinPoolButton.setTitle("Join Pool & Save \(middleOff)", for: .normal)
+        } else if currentTier == 3 {
+            let topDiscount = (tier1.price - tier3.price) / tier1.price * 100
+            let topOff = String(format: "%.0f", topDiscount) + "%"
+            joinPoolButton.setTitle("Join Pool & Save \(topOff)", for: .normal)
+        }
     }
     
     @IBAction func joinPool(_ sender: UIButton) {
