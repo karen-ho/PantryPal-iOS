@@ -14,6 +14,10 @@ extension UIImage {
         case home
         case search
         case setting
+        case visa
+        case mastercard
+        case discover
+        case americanexpress
     }
     
     convenience init!(assetIdentifier: AssetIdentifier) {

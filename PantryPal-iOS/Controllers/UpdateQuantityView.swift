@@ -11,6 +11,7 @@ import UIKit
 
 protocol QuantityDelegate {
     func close()
+    func proceed(quantity: Int)
 }
 
 class UpdateQuantityView: UIView {
@@ -42,5 +43,9 @@ class UpdateQuantityView: UIView {
     
     @IBAction func close(_ sender: UIButton) {
         delegate?.close()
+    }
+    
+    @IBAction func proceed(_ sender: UIButton) {
+        delegate?.proceed(quantity: quantity)
     }
 }

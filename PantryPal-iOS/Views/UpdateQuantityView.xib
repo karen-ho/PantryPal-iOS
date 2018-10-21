@@ -70,6 +70,9 @@
                     <state key="normal" title="Procced to Payment">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="proceed:" destination="slh-XW-tcv" eventType="touchUpInside" id="uag-K1-N80"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAY-aK-754">
                     <rect key="frame" x="330" y="0.0" width="60" height="60"/>

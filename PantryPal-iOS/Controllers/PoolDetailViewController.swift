@@ -69,4 +69,12 @@ extension PoolDetailViewController: QuantityDelegate {
             self.paymentView.isHidden = true
         })
     }
+    
+    func proceed(quantity: Int) {
+        let checkoutStoryboard = UIStoryboard(name: "Checkout", bundle: Bundle(for: self.classForCoder))
+        let checkoutController = checkoutStoryboard.instantiateViewController(withIdentifier: "CheckoutView") as! CheckoutViewController
+        checkoutController.pool = pool
+        checkoutController.quantity = quantity
+        navigationController?.pushViewController(checkoutController, animated: true)
+    }
 }

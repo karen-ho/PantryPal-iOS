@@ -29,7 +29,7 @@ class TabViewController: UITabBarController {
         let settingStoryboard = UIStoryboard(name: "Setting", bundle: Bundle(for: self.classForCoder))
         let settingController = settingStoryboard.instantiateViewController(withIdentifier: "SettingView") as! SettingViewController
         let settingNavController = UINavigationController(rootViewController: settingController)
-        settingNavController.tabBarItem = UITabBarItem(title: "Setting", image: UIImage(assetIdentifier: .setting), selectedImage: UIImage(assetIdentifier: .setting))
+        settingNavController.tabBarItem = UITabBarItem(title: "Account", image: UIImage(assetIdentifier: .setting), selectedImage: UIImage(assetIdentifier: .setting))
         
         viewControllers = [homeNavController, searchNavController, settingNavController]
     }

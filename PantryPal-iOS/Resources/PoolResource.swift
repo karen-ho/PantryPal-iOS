@@ -16,8 +16,8 @@ class PoolResource: Unmarshaling {
     let longitude: Double
     let totalUnits: Int
     let tiers: [TierResource]
-//    let start: Int64
-//    let end: Int64
+    let start: Int64
+    let end: Int64
     let storeName: String
     let pluImage: String
     
@@ -28,8 +28,8 @@ class PoolResource: Unmarshaling {
         longitude = try object.value(for: "long")
         totalUnits = try object.value(for: "totalUnits")
         tiers = try object.value(for: "tiers")
-//        start = try object.value(for: "start")
-//        end = try object.value(for: "end")
+        start = try object.value(for: "start")
+        end = try object.value(for: "end")
         storeName = try object.value(for: "storeName")
         pluImage = try object.value(for: "pluImage")
     }
