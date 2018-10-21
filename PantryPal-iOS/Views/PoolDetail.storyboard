@@ -16,9 +16,62 @@
                     <view key="view" contentMode="scaleToFill" id="zUs-5w-fsH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qvy-bW-0fn">
+                                <rect key="frame" x="105.5" y="36" width="164" height="164"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="164" id="GnU-6i-l2g"/>
+                                    <constraint firstAttribute="width" constant="164" id="qgJ-WT-5qc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fT5-ix-iEv">
+                                <rect key="frame" x="24" y="216" width="327" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mp-Of-6Ze">
+                                <rect key="frame" x="24" y="253.5" width="327" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dij-St-oRt">
+                                <rect key="frame" x="16" y="607" width="343" height="44"/>
+                                <color key="backgroundColor" red="0.090196078430000007" green="0.61176470589999998" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5iM-DP-xvA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Join Pool">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="joinPool:" destination="dTR-1s-mac" eventType="touchUpInside" id="jvc-i2-e1D"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1Mp-Of-6Ze" firstAttribute="top" secondItem="fT5-ix-iEv" secondAttribute="bottom" constant="16" id="27t-U4-W1K"/>
+                            <constraint firstItem="qvy-bW-0fn" firstAttribute="top" secondItem="7ui-Ej-VS8" secondAttribute="top" constant="16" id="EDe-kn-CXM"/>
+                            <constraint firstItem="fT5-ix-iEv" firstAttribute="leading" secondItem="7ui-Ej-VS8" secondAttribute="leading" constant="24" id="Ihc-es-BuM"/>
+                            <constraint firstItem="dij-St-oRt" firstAttribute="leading" secondItem="7ui-Ej-VS8" secondAttribute="leading" constant="16" id="N9s-f0-TIB"/>
+                            <constraint firstItem="qvy-bW-0fn" firstAttribute="centerX" secondItem="zUs-5w-fsH" secondAttribute="centerX" id="Z47-RR-PEo"/>
+                            <constraint firstItem="7ui-Ej-VS8" firstAttribute="bottom" secondItem="dij-St-oRt" secondAttribute="bottom" constant="16" id="anc-sD-MWh"/>
+                            <constraint firstItem="7ui-Ej-VS8" firstAttribute="trailing" secondItem="fT5-ix-iEv" secondAttribute="trailing" constant="24" id="bdE-yN-eb3"/>
+                            <constraint firstItem="7ui-Ej-VS8" firstAttribute="trailing" secondItem="dij-St-oRt" secondAttribute="trailing" constant="16" id="cYR-jM-mO0"/>
+                            <constraint firstItem="fT5-ix-iEv" firstAttribute="top" secondItem="qvy-bW-0fn" secondAttribute="bottom" constant="16" id="i8h-o5-s7G"/>
+                            <constraint firstItem="7ui-Ej-VS8" firstAttribute="trailing" secondItem="1Mp-Of-6Ze" secondAttribute="trailing" constant="24" id="msE-E3-ukc"/>
+                            <constraint firstItem="1Mp-Of-6Ze" firstAttribute="leading" secondItem="7ui-Ej-VS8" secondAttribute="leading" constant="24" id="pQw-qG-Srx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7ui-Ej-VS8"/>
                     </view>
+                    <connections>
+                        <outlet property="pluDefaultPriceLabel" destination="1Mp-Of-6Ze" id="kUR-6Q-ZQr"/>
+                        <outlet property="pluImage" destination="qvy-bW-0fn" id="7gJ-iX-ztP"/>
+                        <outlet property="pluNameLabel" destination="fT5-ix-iEv" id="C1V-mZ-id4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qaM-gi-buB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -18,18 +18,18 @@ enum PantryPalApi {
 }
 
 extension PantryPalApi: TargetType {
-    var baseURL: URL { return URL(string: "https://pantrypal2018.herokuapp.com")! }
+    var baseURL: URL { return URL(string: "https://pantrypal2018.herokuapp.com/api/v1")! }
     
     var path: String {
         switch self {
         case .getPools:
-            return "/pool"
+            return "/pools"
         case .getPool(let id):
-            return "/pool/\(id)"
+            return "/pools/\(id)"
         case .joinPool(let id, let userId, _):
-            return "/pool/\(id)/user/\(userId)"
+            return "/pools/\(id)/users/\(userId)"
         case .leavePool(let id, let userId, _):
-            return "/pool/\(id)/user/\(userId)"
+            return "/pools/\(id)/users/\(userId)"
         }
     }
     
@@ -65,22 +65,26 @@ extension PantryPalApi: TargetType {
             return """
             [{
                 "id": "123",
-                "pluId": "3434",
+                "pluName": "Huggies Little Snugglers Diapers - Size 1 - 216 ct",
                 "lat": 32.2243,
                 "long": -117.2453,
                 "tiers": [{"id": "123", "price": 2.33, "threshold": 3}],
                 "totalUnits": 3,
                 "start": 135343232,
-                "end": 232323232
+                "end": 232323232,
+                "storeName": "Walmart",
+                "pluImage": "https://images-na.ssl-images-amazon.com/images/I/81v5CQmnjiL._SL1500_.jpg"
             }, {
                 "id": "124",
-                "pluId": "34324",
+                "pluName": "Charmin Ultra Soft Toilet Paper, 24 Count",
                 "lat": 32.2243,
                 "long": -117.2453,
                 "tiers": [{"id": "123", "price": 2.33, "threshold": 3}],
                 "totalUnits": 23,
                 "start": 135343232,
-                "end": 232323232
+                "end": 232323232,
+                "storeName": "Walmart",
+                "pluImage": "https://images-na.ssl-images-amazon.com/images/I/91yRL7SfvrL._SX522_.jpg"
             }]
             """.data(using: String.Encoding.utf8)!
         case .getPool:

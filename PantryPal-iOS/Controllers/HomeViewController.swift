@@ -20,6 +20,8 @@ class HomeViewController: UIViewController {
     var locations: [CLLocation] = []
     var processLocationFn: Debouncer?
     
+    var rowHeight: CGFloat = 128.0
+    
     var pools: [PoolResource] = []
     
     override func viewDidLoad() {
@@ -32,6 +34,9 @@ class HomeViewController: UIViewController {
         processLocationFn = Debouncer(delay: 0.5) {
             self.processLocation()
         }
+        
+        let poolNib = UINib(nibName: "PoolCell", bundle: Bundle(for: self.classForCoder))
+        poolTable.register(poolNib, forCellReuseIdentifier: "pool")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -117,7 +122,14 @@ extension HomeViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         let poolStoryboard = UIStoryboard(name: "PoolDetail", bundle: Bundle(for: self.classForCoder))
         let poolController = poolStoryboard.instantiateViewController(withIdentifier: "PoolDetailView") as! PoolDetailViewController
+        let pool = pools[indexPath.row]
+        poolController.pool = pool
+        poolController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(poolController, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return rowHeight
     }
 }
 
@@ -128,7 +140,10 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "pool") as! PoolCell
+        let pool = pools[indexPath.row]
+        cell.setPool(pool)
+        return cell
     }
 
 }
