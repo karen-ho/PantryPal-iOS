@@ -12,6 +12,8 @@ import UIKit
 extension UIImage {
     enum AssetIdentifier: String {
         case home
+        case search
+        case setting
     }
     
     convenience init!(assetIdentifier: AssetIdentifier) {

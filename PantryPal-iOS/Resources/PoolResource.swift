@@ -14,7 +14,7 @@ class PoolResource: Unmarshaling {
     let plu: String
     let latitude: Double
     let longitude: Double
-    let userIds: [String]
+    let totalUnits: Int
     let tiers: [TierResource]
     let start: Int64
     let end: Int64
@@ -24,7 +24,7 @@ class PoolResource: Unmarshaling {
         plu = try object.value(for: "pluId")
         latitude = try object.value(for: "lat")
         longitude = try object.value(for: "long")
-        userIds = try object.value(for: "userIds")
+        totalUnits = try object.value(for: "totalUnits")
         tiers = try object.value(for: "tiers")
         start = try object.value(for: "start")
         end = try object.value(for: "end")

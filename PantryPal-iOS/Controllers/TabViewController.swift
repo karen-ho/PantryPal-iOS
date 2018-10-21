@@ -21,7 +21,17 @@ class TabViewController: UITabBarController {
         let homeNavController = UINavigationController(rootViewController: homeController)
         homeNavController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(assetIdentifier: .home), selectedImage: UIImage(assetIdentifier: .home))
         
-        viewControllers = [homeNavController]
+        let searchStoryboard = UIStoryboard(name: "Search", bundle: Bundle(for: self.classForCoder))
+        let searchController = searchStoryboard.instantiateViewController(withIdentifier: "SearchView") as! SearchViewController
+        let searchNavController = UINavigationController(rootViewController: searchController)
+        searchNavController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(assetIdentifier: .search), selectedImage: UIImage(assetIdentifier: .search))
+        
+        let settingStoryboard = UIStoryboard(name: "Setting", bundle: Bundle(for: self.classForCoder))
+        let settingController = settingStoryboard.instantiateViewController(withIdentifier: "SettingView") as! SettingViewController
+        let settingNavController = UINavigationController(rootViewController: settingController)
+        settingNavController.tabBarItem = UITabBarItem(title: "Setting", image: UIImage(assetIdentifier: .setting), selectedImage: UIImage(assetIdentifier: .setting))
+        
+        viewControllers = [homeNavController, searchNavController, settingNavController]
     }
 }
 

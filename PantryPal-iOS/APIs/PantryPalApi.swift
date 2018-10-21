@@ -13,8 +13,8 @@ enum PantryPalApi {
     // pools
     case getPools(latitude: Double, longitude: Double)
     case getPool(id: String)
-    case joinPool(id: String, userId: String)
-    case leavePool(id: String, userId: String)
+    case joinPool(id: String, userId: String, unit: Int)
+    case leavePool(id: String, userId: String, unit: Int)
 }
 
 extension PantryPalApi: TargetType {
@@ -26,9 +26,9 @@ extension PantryPalApi: TargetType {
             return "/pool"
         case .getPool(let id):
             return "/pool/\(id)"
-        case .joinPool(let id, let userId):
+        case .joinPool(let id, let userId, _):
             return "/pool/\(id)/user/\(userId)"
-        case .leavePool(let id, let userId):
+        case .leavePool(let id, let userId, _):
             return "/pool/\(id)/user/\(userId)"
         }
     }
@@ -52,10 +52,10 @@ extension PantryPalApi: TargetType {
             return .requestParameters(parameters: ["latitude": latitude, "longitude": longitude], encoding: URLEncoding.queryString)
         case .getPool:
             return .requestPlain
-        case .joinPool:
-            return .requestPlain
-        case .leavePool:
-            return .requestPlain
+        case .joinPool(_, _, let unit):
+            return .requestParameters(parameters: ["unit": unit], encoding: JSONEncoding.default)
+        case .leavePool(_, _, let unit):
+            return .requestParameters(parameters: ["unit": unit], encoding: JSONEncoding.default)
         }
     }
     
@@ -69,7 +69,7 @@ extension PantryPalApi: TargetType {
                 "lat": 32.2243,
                 "long": -117.2453,
                 "tiers": [{"id": "123", "price": 2.33, "threshold": 3}],
-                "userIds": ["2132423"],
+                "totalUnits": 3,
                 "start": 135343232,
                 "end": 232323232
             }, {
@@ -78,7 +78,7 @@ extension PantryPalApi: TargetType {
                 "lat": 32.2243,
                 "long": -117.2453,
                 "tiers": [{"id": "123", "price": 2.33, "threshold": 3}],
-                "userIds": ["2132423"],
+                "totalUnits": 23,
                 "start": 135343232,
                 "end": 232323232
             }]
