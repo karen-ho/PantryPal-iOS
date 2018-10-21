@@ -19,22 +19,22 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Se-0N-tOe">
-                        <rect key="frame" x="0.0" y="8" width="92" height="134"/>
+                        <rect key="frame" x="0.0" y="8" width="98" height="134"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H0w-0z-Qcv">
-                                <rect key="frame" x="16" y="16" width="60" height="44"/>
+                                <rect key="frame" x="4" y="4" width="90" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="P2m-G9-wrH"/>
+                                    <constraint firstAttribute="height" constant="50" id="P2m-G9-wrH"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69l-9z-5hb">
-                                <rect key="frame" x="8" y="68" width="76" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <rect key="frame" x="8" y="62" width="82" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAe-y6-oGb">
-                                <rect key="frame" x="8" y="93" width="76" height="17"/>
+                                <rect key="frame" x="8" y="85.5" width="82" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -48,16 +48,16 @@
                             <constraint firstItem="69l-9z-5hb" firstAttribute="leading" secondItem="5Se-0N-tOe" secondAttribute="leading" constant="8" id="GK4-Ea-H0I"/>
                             <constraint firstItem="69l-9z-5hb" firstAttribute="top" secondItem="H0w-0z-Qcv" secondAttribute="bottom" constant="8" id="Mrc-SJ-SQ9"/>
                             <constraint firstItem="69l-9z-5hb" firstAttribute="centerX" secondItem="5Se-0N-tOe" secondAttribute="centerX" id="cLU-pq-2OH"/>
-                            <constraint firstItem="H0w-0z-Qcv" firstAttribute="top" secondItem="5Se-0N-tOe" secondAttribute="top" constant="16" id="jle-Ji-nGR"/>
-                            <constraint firstAttribute="trailing" secondItem="H0w-0z-Qcv" secondAttribute="trailing" constant="16" id="lf8-0d-Ijp"/>
-                            <constraint firstItem="H0w-0z-Qcv" firstAttribute="leading" secondItem="5Se-0N-tOe" secondAttribute="leading" constant="16" id="pqO-03-78q"/>
+                            <constraint firstItem="H0w-0z-Qcv" firstAttribute="top" secondItem="5Se-0N-tOe" secondAttribute="top" constant="4" id="jle-Ji-nGR"/>
+                            <constraint firstAttribute="trailing" secondItem="H0w-0z-Qcv" secondAttribute="trailing" constant="4" id="lf8-0d-Ijp"/>
+                            <constraint firstItem="H0w-0z-Qcv" firstAttribute="leading" secondItem="5Se-0N-tOe" secondAttribute="leading" constant="4" id="pqO-03-78q"/>
                             <constraint firstAttribute="trailing" secondItem="69l-9z-5hb" secondAttribute="trailing" constant="8" id="xRG-JL-xt6"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="5Se-0N-tOe" secondAttribute="trailing" constant="8" id="Btx-av-cr2"/>
+                <constraint firstAttribute="trailing" secondItem="5Se-0N-tOe" secondAttribute="trailing" constant="2" id="Btx-av-cr2"/>
                 <constraint firstItem="5Se-0N-tOe" firstAttribute="top" secondItem="DQ7-4Y-tI3" secondAttribute="top" constant="8" id="SaV-Di-rxf"/>
                 <constraint firstAttribute="bottom" secondItem="5Se-0N-tOe" secondAttribute="bottom" constant="8" id="gjE-1H-BAQ"/>
                 <constraint firstItem="5Se-0N-tOe" firstAttribute="leading" secondItem="DQ7-4Y-tI3" secondAttribute="leading" id="koy-Ks-lWk"/>
@@ -65,9 +65,9 @@
             <viewLayoutGuide key="safeArea" id="mRD-r0-Ldn"/>
             <size key="customSize" width="375" height="353"/>
             <connections>
-                <outlet property="cardEnding" destination="IAe-y6-oGb" id="0pr-06-o1O"/>
+                <outlet property="cardEnding" destination="69l-9z-5hb" id="S6m-KO-uI4"/>
                 <outlet property="cardImage" destination="H0w-0z-Qcv" id="W36-g6-gt4"/>
-                <outlet property="cardTitle" destination="69l-9z-5hb" id="KhR-WP-ekz"/>
+                <outlet property="cardTitle" destination="IAe-y6-oGb" id="AZc-Re-4ar"/>
                 <outlet property="cardView" destination="5Se-0N-tOe" id="Nop-W3-46p"/>
             </connections>
             <point key="canvasLocation" x="357.60000000000002" y="235.23238380809596"/>

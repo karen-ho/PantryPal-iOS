@@ -21,6 +21,10 @@ class CheckoutViewController: UIViewController {
     @IBOutlet weak var productTotalLabel: UILabel!
     
     @IBOutlet weak var paymentCollectionView: UICollectionView!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var savingsLabel: UILabel!
+    @IBOutlet weak var savingsUnlockView: UIView!
+    @IBOutlet weak var savingsUnlockLabel: UILabel!
     
     var pool: PoolResource!
     var quantity: Int = 1
@@ -48,6 +52,45 @@ class CheckoutViewController: UIViewController {
         let paymentNib = UINib(nibName: "PaymentCell", bundle: Bundle(for: self.classForCoder))
         paymentCollectionView.register(paymentNib, forCellWithReuseIdentifier: "payment")
         paymentCollectionView.clipsToBounds = false
+        
+        let text = "123 Main St."
+        let textRange = NSMakeRange(0, text.count)
+        let attributedText = NSMutableAttributedString(string: text)
+        attributedText.addAttribute(NSAttributedString.Key.underlineStyle , value: NSUnderlineStyle.single.rawValue, range: textRange)
+        // Add other attributes if needed
+        self.addressLabel.attributedText = attributedText
+        
+        let tiers = pool.tiers.sorted(by: {$0.threshold < $1.threshold})
+        let tier1 = tiers[0]
+        let tier2 = tiers[1]
+        let tier3 = tiers[2]
+        
+        var currentTier = 1
+        
+        if tier2.threshold < pool.totalUnits {
+            currentTier = 2
+        } else if tier3.threshold <= pool.totalUnits {
+            currentTier = 3
+        }
+        
+        if currentTier == 2 {
+            let middleDiscount = (tier1.price - tier2.price) * Double(quantity)
+            let middle = (tier1.price - tier2.price) / tier1.price * 100
+            let middleOff = String(format: "%.0f", middle) + "%"
+            savingsLabel.text = "You saved \(middleDiscount.asLocaleCurrency) with this pool"
+            savingsUnlockLabel.text = "\(middleOff) Savings Unlocked"
+        } else if currentTier == 3 {
+            let topDiscount = (tier1.price - tier3.price) * Double(quantity)
+            let top = (tier1.price - tier3.price) / tier1.price * 100
+            let topOff = String(format: "%.0f", top) + "%"
+            savingsLabel.text = "You saved \(topDiscount.asLocaleCurrency) with this pool"
+            savingsUnlockLabel.text = "\(topOff) Max Savings Unlocked"
+        } else {
+            savingsLabel.text = ""
+            savingsUnlockLabel.text = "Savings Might Unlock!"
+        }
+        
+        savingsUnlockView.layer.cornerRadius = 4.0
     }
     
     func showNavigationBar() {

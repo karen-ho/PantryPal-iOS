@@ -15,7 +15,7 @@ class PaymentCell: UICollectionViewCell {
     @IBOutlet weak var cardEnding: UILabel!
     @IBOutlet weak var cardView: UIView!
     
-    let imageAssets: [Card] = [Card(image: .visa, name: "Visa"), Card(image: .mastercard, name: "MasterCard"), Card(image: .americanexpress, name: "Amex"), Card(image: .discover, name: "Discover")]
+    let imageAssets: [Card] = [Card(image: .visa, name: "Exp. 1/22"), Card(image: .visa, name: "Exp. 1/19"), Card(image: .visa, name: "Exp. 2/20"), Card(image: .visa, name: "Exp. 3/21")]
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -40,7 +40,7 @@ class PaymentCell: UICollectionViewCell {
     func setVisa() {
         let number = Int.random(in: 1000 ... 9999)
         cardImage.image = UIImage(assetIdentifier: .visa)
-        cardTitle.text = "Visa"
+        cardTitle.text = "4/19"
         cardEnding.text = "**** \(number)"
     }
 }

@@ -49,6 +49,7 @@
 		9C605D28217C3DD20000C100 /* ProductDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C605D27217C3DD20000C100 /* ProductDetailCell.xib */; };
 		9C605D2A217C45200000C100 /* ProductDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C605D29217C45200000C100 /* ProductDetailCell.swift */; };
 		9C605D2C217C4E280000C100 /* UIColor+Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C605D2B217C4E280000C100 /* UIColor+Basic.swift */; };
+		9CC97CB9217C75950013FDA0 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC97CB8217C75950013FDA0 /* Order.storyboard */; };
 		D34106F41ADD8D5529FD2B34 /* Pods_PantryPal_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4A494E77B131306C984425 /* Pods_PantryPal_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +123,7 @@
 		9C605D27217C3DD20000C100 /* ProductDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailCell.xib; sourceTree = "<group>"; };
 		9C605D29217C45200000C100 /* ProductDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCell.swift; sourceTree = "<group>"; };
 		9C605D2B217C4E280000C100 /* UIColor+Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Basic.swift"; sourceTree = "<group>"; };
+		9CC97CB8217C75950013FDA0 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		AAEA73141911CBF70A982D9C /* Pods_PantryPal_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PantryPal_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23F568A88D0D079B58DC933 /* Pods_PantryPal_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PantryPal_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E73704F0551A8B4B01773501 /* Pods-PantryPal-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantryPal-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PantryPal-iOSTests/Pods-PantryPal-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				9C605CFB217BD2A80000C100 /* Home.storyboard */,
+				9CC97CB8217C75950013FDA0 /* Order.storyboard */,
 				9C605D23217C2FCF0000C100 /* PaymentCell.xib */,
 				9C249E86217BA88D00121E50 /* Main.storyboard */,
 				9C605D11217C0BE60000C100 /* PoolCell.xib */,
@@ -433,6 +436,7 @@
 				9C249E8D217BA88E00121E50 /* LaunchScreen.storyboard in Resources */,
 				9C249E8A217BA88E00121E50 /* Assets.xcassets in Resources */,
 				9C605D20217C25A30000C100 /* Checkout.storyboard in Resources */,
+				9CC97CB9217C75950013FDA0 /* Order.storyboard in Resources */,
 				9C605D24217C2FCF0000C100 /* PaymentCell.xib in Resources */,
 				9C249E88217BA88D00121E50 /* Main.storyboard in Resources */,
 				9C605D12217C0BE60000C100 /* PoolCell.xib in Resources */,
