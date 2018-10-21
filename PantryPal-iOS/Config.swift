@@ -8,6 +8,7 @@
 
 import Foundation
 import Moya
+import Firebase
 
 struct Config {
     static var provider: MoyaProvider<PantryPalApi> {
@@ -16,6 +17,12 @@ struct Config {
 //            let manager = MoyaProvider<PantryPalApi>.defaultAlamofireManager()
 //            manager.session.configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
 //            return MoyaProvider<PantryPalApi>(manager: manager, plugins: [NetworkLoggerPlugin()])
+        }
+    }
+    
+    static var db: DatabaseReference {
+        get {
+            return Database.database().reference()
         }
     }
 }

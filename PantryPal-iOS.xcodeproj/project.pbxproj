@@ -54,6 +54,9 @@
 		9CC97CBD217C88270013FDA0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC97CBC217C88270013FDA0 /* LoadingView.swift */; };
 		9CC97CC1217C9E940013FDA0 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC97CC0217C9E940013FDA0 /* StoreViewController.swift */; };
 		9CC97CC3217C9EAB0013FDA0 /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC97CC2217C9EAB0013FDA0 /* Store.storyboard */; };
+		9CC97CC5217CAABC0013FDA0 /* PoolFilledView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC97CC4217CAABC0013FDA0 /* PoolFilledView.xib */; };
+		9CC97CC7217CAE020013FDA0 /* PoolFilledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC97CC6217CAE020013FDA0 /* PoolFilledView.swift */; };
+		9CC97CCA217CB08D0013FDA0 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC97CC9217CB08D0013FDA0 /* DatabaseManager.swift */; };
 		D34106F41ADD8D5529FD2B34 /* Pods_PantryPal_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4A494E77B131306C984425 /* Pods_PantryPal_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +135,9 @@
 		9CC97CBC217C88270013FDA0 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		9CC97CC0217C9E940013FDA0 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		9CC97CC2217C9EAB0013FDA0 /* Store.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
+		9CC97CC4217CAABC0013FDA0 /* PoolFilledView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PoolFilledView.xib; sourceTree = "<group>"; };
+		9CC97CC6217CAE020013FDA0 /* PoolFilledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolFilledView.swift; sourceTree = "<group>"; };
+		9CC97CC9217CB08D0013FDA0 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		AAEA73141911CBF70A982D9C /* Pods_PantryPal_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PantryPal_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23F568A88D0D079B58DC933 /* Pods_PantryPal_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PantryPal_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E73704F0551A8B4B01773501 /* Pods-PantryPal-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantryPal-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PantryPal-iOSTests/Pods-PantryPal-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -239,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				9C605CFB217BD2A80000C100 /* Home.storyboard */,
+				9CC97CC4217CAABC0013FDA0 /* PoolFilledView.xib */,
 				9CC97CC2217C9EAB0013FDA0 /* Store.storyboard */,
 				9CC97CB8217C75950013FDA0 /* Order.storyboard */,
 				9C605D23217C2FCF0000C100 /* PaymentCell.xib */,
@@ -258,6 +265,7 @@
 		9C249EB1217BAAB800121E50 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				9CC97CC9217CB08D0013FDA0 /* DatabaseManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -303,6 +311,7 @@
 				9C605D21217C25C50000C100 /* CheckoutViewController.swift */,
 				9C249E84217BA88D00121E50 /* MainViewController.swift */,
 				9C605D13217C0BFE0000C100 /* PoolCell.swift */,
+				9CC97CC6217CAE020013FDA0 /* PoolFilledView.swift */,
 				9C605D01217BDBC40000C100 /* PoolDetailViewController.swift */,
 				9C605D29217C45200000C100 /* ProductDetailCell.swift */,
 				9C605D09217C05600000C100 /* SearchViewController.swift */,
@@ -451,6 +460,7 @@
 				9C605D20217C25A30000C100 /* Checkout.storyboard in Resources */,
 				9CC97CB9217C75950013FDA0 /* Order.storyboard in Resources */,
 				9C605D24217C2FCF0000C100 /* PaymentCell.xib in Resources */,
+				9CC97CC5217CAABC0013FDA0 /* PoolFilledView.xib in Resources */,
 				9C249E88217BA88D00121E50 /* Main.storyboard in Resources */,
 				9C605D12217C0BE60000C100 /* PoolCell.xib in Resources */,
 				9C605D10217C09750000C100 /* Setting.storyboard in Resources */,
@@ -574,9 +584,11 @@
 				9C605D1A217C1CEE0000C100 /* UpdateQuantityView.swift in Sources */,
 				9C605CE3217BB0460000C100 /* PoolApi.swift in Sources */,
 				9C605CEC217BC1E20000C100 /* TierResource.swift in Sources */,
+				9CC97CC7217CAE020013FDA0 /* PoolFilledView.swift in Sources */,
 				9C605D16217C10280000C100 /* Double+Currency.swift in Sources */,
 				9CC97CC1217C9E940013FDA0 /* StoreViewController.swift in Sources */,
 				9C605D0E217C09580000C100 /* SettingViewController.swift in Sources */,
+				9CC97CCA217CB08D0013FDA0 /* DatabaseManager.swift in Sources */,
 				9C605D26217C30DD0000C100 /* PaymentCell.swift in Sources */,
 				9C605CF8217BD0FE0000C100 /* UIImage+Asset.swift in Sources */,
 				9C605D2C217C4E280000C100 /* UIColor+Basic.swift in Sources */,

@@ -29,6 +29,7 @@ class CheckoutViewController: UIViewController {
     var pool: PoolResource!
     var quantity: Int = 1
     let poolApi = PoolApi.sharedInstance
+    let databaseManager = DatabaseManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,6 +117,9 @@ class CheckoutViewController: UIViewController {
             COUNT = 1
         } else {
             COUNT = 0
+        }
+        
+        databaseManager.send(assistance: ["DONE!": true]) { (_, _) in
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {

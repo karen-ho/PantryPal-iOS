@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
     let locationManager: CLLocationManager = CLLocationManager()
     
     let poolApi: PoolApi = PoolApi.sharedInstance
+    let databaseManager = DatabaseManager.sharedInstance
     
     var locations: [CLLocation] = []
     var processLocationFn: Debouncer?
@@ -30,6 +31,7 @@ class HomeViewController: UIViewController {
     var rowHeight: CGFloat = 244.0
     
     var pools: [PoolResource] = []
+    var poolFilledView: PoolFilledView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +63,15 @@ class HomeViewController: UIViewController {
         attributedText.addAttribute(NSAttributedString.Key.underlineStyle , value: NSUnderlineStyle.single.rawValue, range: textRange)
         // Add other attributes if needed
         sortLabel.attributedText = attributedText
+        
+        self.poolFilledView = createPoolFilledView()
+        
+//        databaseManager.observe { (success) in
+//            if success {
+//                self.showPoolFilledView()
+//                self.databaseManager.remove()
+//            }
+//        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -79,6 +90,19 @@ class HomeViewController: UIViewController {
             self.poolTable.reloadData()
         }
     }
+    
+    func createPoolFilledView() -> PoolFilledView {
+        let filledView = PoolFilledView.loadFromNibNamed("PoolFilledView", bundle: Bundle(for: self.classForCoder)) as! PoolFilledView
+        filledView.delegate = self
+        return filledView
+    }
+    
+    func showPoolFilledView() {
+        if let poolFilledView = poolFilledView {
+            UIApplication.shared.keyWindow?.addSubview(poolFilledView)
+        }
+    }
+    
 }
 // MARK: - CLLocationManagerDelegate
 extension HomeViewController: CLLocationManagerDelegate {
@@ -185,5 +209,12 @@ extension HomeViewController: PoolDelegate {
         orderController.hidesBottomBarWhenPushed = true
         orderController.showConfirmation = true
         navigationController?.pushViewController(orderController, animated: true)
+    }
+}
+
+// MARK: -
+extension HomeViewController: PoolFilledDelegate {
+    func closeFilled() {
+        poolFilledView?.removeFromSuperview()
     }
 }

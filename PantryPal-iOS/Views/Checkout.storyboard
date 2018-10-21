@@ -266,7 +266,7 @@
                     <navigationItem key="navigationItem" id="v45-xf-yOw">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="RKv-89-tCS">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kwR-ID-5gM">
-                                <rect key="frame" x="16" y="7" width="20" height="22"/>
+                                <rect key="frame" x="16" y="11" width="20" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
                                 <connections>
