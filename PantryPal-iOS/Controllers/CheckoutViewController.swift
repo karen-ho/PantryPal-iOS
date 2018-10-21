@@ -104,6 +104,10 @@ class CheckoutViewController: UIViewController {
         completePurchase("PAYPAL")
     }
     
+    @IBAction func goBack(_ sender: UIButton) {
+         navigationController?.popViewController(animated: true)
+    }
+    
     func completePurchase(_ paymentType: String) {
         let loadingView = LoadingView.createLoadingView(text: "Processing Payment...")
         UIApplication.shared.keyWindow?.addSubview(loadingView)

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dhh-2I-7t8">
-                                <rect key="frame" x="0.0" y="20" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="300"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W5K-lp-G3I">
                                         <rect key="frame" x="16" y="0.0" width="343" height="280"/>
@@ -167,7 +167,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzt-78-QBH">
-                                <rect key="frame" x="36" y="320" width="303" height="50"/>
+                                <rect key="frame" x="36" y="364" width="303" height="50"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkoutPayPal" translatesAutoresizingMaskIntoConstraints="NO" id="VQM-yF-CmB">
                                         <rect key="frame" x="0.0" y="0.0" width="303" height="50"/>
@@ -193,16 +193,16 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKL-0l-saU">
-                                <rect key="frame" x="176.5" y="394" width="22" height="18"/>
+                                <rect key="frame" x="176.5" y="438" width="22" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ko9-rc-fqv">
-                                <rect key="frame" x="36" y="428" width="303" height="203"/>
+                                <rect key="frame" x="36" y="472" width="303" height="159"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ijU-cb-Alx">
-                                        <rect key="frame" x="0.0" y="0.0" width="303" height="203"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="303" height="159"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0yR-xe-auc">
                                             <size key="itemSize" width="50" height="50"/>
@@ -226,14 +226,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hf8-Ja-6Mf">
-                                <rect key="frame" x="36" y="402" width="132.5" height="2"/>
+                                <rect key="frame" x="36" y="446" width="132.5" height="2"/>
                                 <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="Rhf-19-q39"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOz-Eu-h9e">
-                                <rect key="frame" x="214.5" y="402" width="124.5" height="2"/>
+                                <rect key="frame" x="214.5" y="446" width="124.5" height="2"/>
                                 <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="YfY-RX-Xmb"/>
@@ -263,6 +263,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c2S-E1-2AU"/>
                     </view>
+                    <navigationItem key="navigationItem" id="v45-xf-yOw">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="RKv-89-tCS">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kwR-ID-5gM">
+                                <rect key="frame" x="16" y="7" width="20" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="goBack:" destination="vBh-Lj-Sqe" eventType="touchUpInside" id="HSU-xa-Hvc"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addressLabel" destination="lXo-Iq-jNw" id="5bJ-PE-JlE"/>
                         <outlet property="paymentCollectionView" destination="ijU-cb-Alx" id="gUd-pd-IJa"/>
@@ -280,10 +292,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGj-fu-EBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1284" y="-182.15892053973016"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mbm-fb-uNF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dpy-OR-KOp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3LT-P2-wLj">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vBh-Lj-Sqe" kind="relationship" relationship="rootViewController" id="DK4-Fc-da7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uBJ-zx-Pc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="344.80000000000001" y="-182.15892053973016"/>
         </scene>
     </scenes>
     <resources>
+        <image name="back" width="20" height="20"/>
         <image name="checkoutPayPal" width="243" height="47"/>
         <image name="clock" width="23" height="22"/>
         <image name="location" width="15" height="18"/>

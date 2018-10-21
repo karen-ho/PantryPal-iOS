@@ -121,6 +121,10 @@ class OrderViewController: UIViewController {
 //        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    @IBAction func goBack(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     func setQRImage() {
         let qrData = """
         {

@@ -68,6 +68,10 @@ class PoolDetailViewController: UIViewController {
         overlayView = createOverlayView()
     }
     
+    @IBAction func goBack(_ sender: UIButton) {
+         navigationController?.popViewController(animated: true)
+    }
+    
     func addOverlay(_ overlayView: UIView) {
         view.addSubview(overlayView)
     }

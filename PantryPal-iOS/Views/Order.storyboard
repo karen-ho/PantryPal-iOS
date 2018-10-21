@@ -269,7 +269,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DEH-oJ-luK"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0jQ-Vr-4Y4"/>
+                    <navigationItem key="navigationItem" id="0jQ-Vr-4Y4">
+                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="JS9-72-sJC">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BGF-Bi-DJZ">
+                                <rect key="frame" x="16" y="11" width="20" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="goBack:" destination="vc2-dY-Kbn" eventType="touchUpInside" id="Aad-pd-zVG"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addressLabel" destination="xFe-Yj-U1q" id="fcE-Nr-dy6"/>
                         <outlet property="confirmationNumberLabel" destination="0Wn-4L-B5m" id="bdS-Sp-Vjn"/>
@@ -316,6 +327,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="back" width="20" height="20"/>
         <image name="clock" width="23" height="22"/>
         <image name="location" width="15" height="18"/>
         <image name="star" width="40" height="37"/>
