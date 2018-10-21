@@ -47,7 +47,7 @@ class PoolResource: Unmarshaling {
     }
     
     func getDefaultPrice() -> Double {
-        if let price = tiers.first?.price {
+        if let price = tiers.last?.price {
             return price
         }
         return 0.0

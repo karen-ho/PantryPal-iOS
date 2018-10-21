@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
     var locations: [CLLocation] = []
     var processLocationFn: Debouncer?
     
-    var rowHeight: CGFloat = 128.0
+    var rowHeight: CGFloat = 244.0
     
     var pools: [PoolResource] = []
     
@@ -167,7 +167,8 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "pool") as! PoolCell
         let pool = pools[indexPath.row]
-        cell.setPool(pool)
+        cell.setPool(pool, index: indexPath.row)
+        cell.selectionStyle = .none
         return cell
     }
 

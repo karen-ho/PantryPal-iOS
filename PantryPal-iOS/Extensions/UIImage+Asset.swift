@@ -20,6 +20,8 @@ extension UIImage {
         case wallet
         case shop
         case pools
+        case oneDay
+        case twoDays
     }
     
     convenience init!(assetIdentifier: AssetIdentifier) {
