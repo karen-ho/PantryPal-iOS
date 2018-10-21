@@ -46,7 +46,8 @@
 		9C605D22217C25C50000C100 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C605D21217C25C50000C100 /* CheckoutViewController.swift */; };
 		9C605D24217C2FCF0000C100 /* PaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C605D23217C2FCF0000C100 /* PaymentCell.xib */; };
 		9C605D26217C30DD0000C100 /* PaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C605D25217C30DD0000C100 /* PaymentCell.swift */; };
-		9C605D28217C3DD20000C100 /* ProductDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C605D27217C3DD20000C100 /* ProductDetailsCell.xib */; };
+		9C605D28217C3DD20000C100 /* ProductDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C605D27217C3DD20000C100 /* ProductDetailCell.xib */; };
+		9C605D2A217C45200000C100 /* ProductDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C605D29217C45200000C100 /* ProductDetailCell.swift */; };
 		D34106F41ADD8D5529FD2B34 /* Pods_PantryPal_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4A494E77B131306C984425 /* Pods_PantryPal_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -117,7 +118,8 @@
 		9C605D21217C25C50000C100 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		9C605D23217C2FCF0000C100 /* PaymentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentCell.xib; sourceTree = "<group>"; };
 		9C605D25217C30DD0000C100 /* PaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCell.swift; sourceTree = "<group>"; };
-		9C605D27217C3DD20000C100 /* ProductDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailsCell.xib; sourceTree = "<group>"; };
+		9C605D27217C3DD20000C100 /* ProductDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailCell.xib; sourceTree = "<group>"; };
+		9C605D29217C45200000C100 /* ProductDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCell.swift; sourceTree = "<group>"; };
 		AAEA73141911CBF70A982D9C /* Pods_PantryPal_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PantryPal_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23F568A88D0D079B58DC933 /* Pods_PantryPal_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PantryPal_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E73704F0551A8B4B01773501 /* Pods-PantryPal-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantryPal-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PantryPal-iOSTests/Pods-PantryPal-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -229,7 +231,7 @@
 				9C249E86217BA88D00121E50 /* Main.storyboard */,
 				9C605D11217C0BE60000C100 /* PoolCell.xib */,
 				9C605CFF217BDB660000C100 /* PoolDetail.storyboard */,
-				9C605D27217C3DD20000C100 /* ProductDetailsCell.xib */,
+				9C605D27217C3DD20000C100 /* ProductDetailCell.xib */,
 				9C605D0B217C057D0000C100 /* Search.storyboard */,
 				9C605D0F217C09750000C100 /* Setting.storyboard */,
 				9C605CF5217BD03C0000C100 /* Tab.storyboard */,
@@ -285,6 +287,7 @@
 				9C249E84217BA88D00121E50 /* MainViewController.swift */,
 				9C605D13217C0BFE0000C100 /* PoolCell.swift */,
 				9C605D01217BDBC40000C100 /* PoolDetailViewController.swift */,
+				9C605D29217C45200000C100 /* ProductDetailCell.swift */,
 				9C605D09217C05600000C100 /* SearchViewController.swift */,
 				9C605D0D217C09580000C100 /* SettingViewController.swift */,
 				9C605CF3217BD01A0000C100 /* TabViewController.swift */,
@@ -432,7 +435,7 @@
 				9C605D12217C0BE60000C100 /* PoolCell.xib in Resources */,
 				9C605D10217C09750000C100 /* Setting.storyboard in Resources */,
 				9C605D18217C1AC70000C100 /* UpdateQuantityView.xib in Resources */,
-				9C605D28217C3DD20000C100 /* ProductDetailsCell.xib in Resources */,
+				9C605D28217C3DD20000C100 /* ProductDetailCell.xib in Resources */,
 				9C605D00217BDB660000C100 /* PoolDetail.storyboard in Resources */,
 				9C605D0C217C057D0000C100 /* Search.storyboard in Resources */,
 				9C605CFE217BD4DD0000C100 /* GoogleService-Info.plist in Resources */,
@@ -562,6 +565,7 @@
 				9C605CE5217BB0E00000C100 /* Config.swift in Sources */,
 				9C605CF2217BCFCB0000C100 /* UIViewController+Navigate.swift in Sources */,
 				9C605D22217C25C50000C100 /* CheckoutViewController.swift in Sources */,
+				9C605D2A217C45200000C100 /* ProductDetailCell.swift in Sources */,
 				9C605CF4217BD01A0000C100 /* TabViewController.swift in Sources */,
 				9C605CEA217BB76C0000C100 /* Response+Marshal.swift in Sources */,
 				9C249E83217BA88D00121E50 /* AppDelegate.swift in Sources */,

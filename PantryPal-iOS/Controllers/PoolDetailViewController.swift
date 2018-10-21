@@ -11,10 +11,10 @@ import UIKit
 
 class PoolDetailViewController: UIViewController {
     
-    @IBOutlet weak var pluImage: UIImageView!
-    @IBOutlet weak var pluNameLabel: UILabel!
-    @IBOutlet weak var pluDefaultPriceLabel: UILabel!
     @IBOutlet weak var paymentView: UIView!
+    @IBOutlet weak var productTable: UITableView!
+    
+    var rowHeight: CGFloat = 750.0
     
     var pool: PoolResource!
     
@@ -23,11 +23,6 @@ class PoolDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: pool.pluImage)
-        pluImage.kf.setImage(with: url)
-        pluNameLabel.text = pool.pluName
-        pluDefaultPriceLabel.text = "Reg \(pool.getDefaultPrice().asLocaleCurrency)"
-        
         quantityView = createQuantityView()
         
         paymentView.clipsToBounds = false
@@ -35,6 +30,9 @@ class PoolDetailViewController: UIViewController {
         paymentView.layer.shadowOffset = CGSize(width: 0, height: 20)
         paymentView.layer.shadowOpacity = 1
         paymentView.layer.shadowRadius = 20
+        
+        let productDetailNib = UINib(nibName: "ProductDetailCell", bundle: Bundle(for: self.classForCoder))
+        productTable.register(productDetailNib, forCellReuseIdentifier: "productDetail")
     }
     
     @IBAction func joinPool(_ sender: UIButton) {
@@ -76,5 +74,25 @@ extension PoolDetailViewController: QuantityDelegate {
         checkoutController.pool = pool
         checkoutController.quantity = quantity
         navigationController?.pushViewController(checkoutController, animated: true)
+    }
+}
+
+// MARK: -
+extension PoolDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return rowHeight
+    }
+}
+
+// MARK: -
+extension PoolDetailViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "productDetail") as! ProductDetailCell
+        cell.setProduct(pool: pool)
+        return cell
     }
 }
