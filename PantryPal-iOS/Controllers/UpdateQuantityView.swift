@@ -19,6 +19,8 @@ class UpdateQuantityView: UIView {
     @IBOutlet weak var minusQuantityButton: UIButton!
     @IBOutlet weak var quantityLabel: UILabel!
     
+    @IBOutlet weak var proceedButton: UIButton!
+    
     var quantity: Int = 1
     var delegate: QuantityDelegate?
     
@@ -27,6 +29,12 @@ class UpdateQuantityView: UIView {
         
         addQuantityButton.layer.cornerRadius = addQuantityButton.frame.height / 2.0
         minusQuantityButton.layer.cornerRadius = minusQuantityButton.frame.height / 2.0
+        
+        proceedButton.clipsToBounds = false
+        proceedButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.16).cgColor
+        proceedButton.layer.shadowOffset = CGSize(width: 0, height: 8)
+        proceedButton.layer.shadowOpacity = 1
+        proceedButton.layer.shadowRadius = 8
     }
     
     @IBAction func addQuantity(_ sender: UIButton) {

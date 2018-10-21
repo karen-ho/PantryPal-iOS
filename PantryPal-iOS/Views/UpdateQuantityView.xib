@@ -16,13 +16,13 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJC-I1-i35">
-                    <rect key="frame" x="148" y="64" width="94" height="22"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <rect key="frame" x="144" y="24" width="102.5" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRS-WF-aii">
-                    <rect key="frame" x="171" y="118" width="48" height="29"/>
+                    <rect key="frame" x="171" y="80" width="48" height="29"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="48" id="TBG-G4-f8n"/>
                     </constraints>
@@ -31,8 +31,8 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0p-Qp-e0B">
-                    <rect key="frame" x="83" y="104.5" width="56" height="56"/>
-                    <color key="backgroundColor" red="0.090196078430000007" green="0.61176470589999998" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="83" y="66.5" width="56" height="56"/>
+                    <color key="backgroundColor" red="0.81176470588235294" green="0.83137254901960778" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="56" id="02p-o7-nnD"/>
                         <constraint firstAttribute="height" constant="56" id="vi3-JK-c9r"/>
@@ -46,8 +46,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRh-He-pJt">
-                    <rect key="frame" x="251" y="104.5" width="56" height="56"/>
-                    <color key="backgroundColor" red="0.090196078430000007" green="0.61176470589999998" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="251" y="66.5" width="56" height="56"/>
+                    <color key="backgroundColor" red="0.81176470588235294" green="0.83137254901960778" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="56" id="ACg-Yq-qKl"/>
                         <constraint firstAttribute="width" constant="56" id="a9r-Db-8OU"/>
@@ -60,28 +60,39 @@
                         <action selector="addQuantity:" destination="slh-XW-tcv" eventType="touchUpInside" id="vUc-pM-Hab"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdO-Ls-bWT">
-                    <rect key="frame" x="0.0" y="238" width="390" height="44"/>
-                    <color key="backgroundColor" red="0.090196078430000007" green="0.61176470589999998" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gjn-WF-OOo">
+                    <rect key="frame" x="0.0" y="206" width="390" height="76"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdO-Ls-bWT">
+                            <rect key="frame" x="16" y="16" width="358" height="44"/>
+                            <color key="backgroundColor" red="0.082352941176470587" green="0.48627450980392156" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="0aw-jC-3QX"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <state key="normal" title="Procced to Payment">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="proceed:" destination="slh-XW-tcv" eventType="touchUpInside" id="uag-K1-N80"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="0aw-jC-3QX"/>
+                        <constraint firstItem="wdO-Ls-bWT" firstAttribute="leading" secondItem="Gjn-WF-OOo" secondAttribute="leading" constant="16" id="7s7-6k-8EB"/>
+                        <constraint firstAttribute="bottom" secondItem="wdO-Ls-bWT" secondAttribute="bottom" constant="16" id="JKY-x7-bbR"/>
+                        <constraint firstAttribute="height" constant="76" id="Sb3-Jo-cVu"/>
+                        <constraint firstAttribute="trailing" secondItem="wdO-Ls-bWT" secondAttribute="trailing" constant="16" id="blf-of-Kd9"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                    <state key="normal" title="Procced to Payment">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="proceed:" destination="slh-XW-tcv" eventType="touchUpInside" id="uag-K1-N80"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAY-aK-754">
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAY-aK-754">
                     <rect key="frame" x="330" y="0.0" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="clJ-EL-Cgb"/>
                         <constraint firstAttribute="width" constant="60" id="nKz-ct-fcH"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="32"/>
-                    <state key="normal" title="x">
+                    <state key="normal" image="close">
                         <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
@@ -91,18 +102,18 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="Gjn-WF-OOo" firstAttribute="leading" secondItem="slh-XW-tcv" secondAttribute="leading" id="6d0-8i-ul1"/>
                 <constraint firstItem="aAY-aK-754" firstAttribute="trailing" secondItem="Yf4-jc-tfb" secondAttribute="trailing" id="C6H-UR-hw7"/>
                 <constraint firstItem="lRh-He-pJt" firstAttribute="leading" secondItem="aRS-WF-aii" secondAttribute="trailing" constant="32" id="H73-6e-WZL"/>
-                <constraint firstItem="Yf4-jc-tfb" firstAttribute="bottom" secondItem="wdO-Ls-bWT" secondAttribute="bottom" id="H7q-d7-IeU"/>
+                <constraint firstAttribute="trailing" secondItem="Gjn-WF-OOo" secondAttribute="trailing" id="M1C-MG-EYS"/>
                 <constraint firstItem="aRS-WF-aii" firstAttribute="centerX" secondItem="slh-XW-tcv" secondAttribute="centerX" id="MCt-oX-IGj"/>
+                <constraint firstAttribute="bottom" secondItem="Gjn-WF-OOo" secondAttribute="bottom" id="TB0-si-BTI"/>
                 <constraint firstItem="MJC-I1-i35" firstAttribute="centerX" secondItem="slh-XW-tcv" secondAttribute="centerX" id="aWY-Ku-KeH"/>
                 <constraint firstItem="lRh-He-pJt" firstAttribute="centerY" secondItem="aRS-WF-aii" secondAttribute="centerY" id="cWe-sf-DjM"/>
-                <constraint firstItem="Yf4-jc-tfb" firstAttribute="trailing" secondItem="wdO-Ls-bWT" secondAttribute="trailing" id="ia4-yp-dq2"/>
                 <constraint firstItem="aRS-WF-aii" firstAttribute="leading" secondItem="c0p-Qp-e0B" secondAttribute="trailing" constant="32" id="o49-ns-T5l"/>
                 <constraint firstItem="aRS-WF-aii" firstAttribute="top" secondItem="MJC-I1-i35" secondAttribute="bottom" constant="32" id="oxd-Sq-eiH"/>
-                <constraint firstItem="wdO-Ls-bWT" firstAttribute="leading" secondItem="Yf4-jc-tfb" secondAttribute="leading" id="pYM-pe-IxN"/>
                 <constraint firstItem="c0p-Qp-e0B" firstAttribute="centerY" secondItem="aRS-WF-aii" secondAttribute="centerY" id="s4X-cZ-DvK"/>
-                <constraint firstItem="MJC-I1-i35" firstAttribute="top" secondItem="Yf4-jc-tfb" secondAttribute="top" constant="64" id="uCa-o9-tao"/>
+                <constraint firstItem="MJC-I1-i35" firstAttribute="top" secondItem="Yf4-jc-tfb" secondAttribute="top" constant="24" id="uCa-o9-tao"/>
                 <constraint firstItem="aAY-aK-754" firstAttribute="top" secondItem="Yf4-jc-tfb" secondAttribute="top" id="znA-Tx-wGn"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -110,9 +121,13 @@
             <connections>
                 <outlet property="addQuantityButton" destination="lRh-He-pJt" id="JVl-Ia-la2"/>
                 <outlet property="minusQuantityButton" destination="c0p-Qp-e0B" id="L6G-V4-EXJ"/>
+                <outlet property="proceedButton" destination="wdO-Ls-bWT" id="AhH-js-mhZ"/>
                 <outlet property="quantityLabel" destination="aRS-WF-aii" id="kZx-5f-DZj"/>
             </connections>
             <point key="canvasLocation" x="188.80000000000001" y="-644.07796101949032"/>
         </view>
     </objects>
+    <resources>
+        <image name="close" width="14" height="15"/>
+    </resources>
 </document>

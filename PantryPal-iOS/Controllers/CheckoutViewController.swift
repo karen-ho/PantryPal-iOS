@@ -49,6 +49,12 @@ class CheckoutViewController: UIViewController {
         paymentCollectionView.register(paymentNib, forCellWithReuseIdentifier: "payment")
         paymentCollectionView.clipsToBounds = false
     }
+    
+    func showNavigationBar() {
+        navigationController?.navigationBar.layer.zPosition = 1
+        navigationController?.navigationBar.isUserInteractionEnabled = true
+        navigationController?.navigationBar.isTranslucent = false
+    }
 }
 
 // MARK: - UICollectionViewDelegate

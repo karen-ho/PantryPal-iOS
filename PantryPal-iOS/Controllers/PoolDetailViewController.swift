@@ -20,6 +20,7 @@ class PoolDetailViewController: UIViewController {
     var pool: PoolResource!
     
     var quantityView: UpdateQuantityView?
+    var overlayView: UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,9 +58,38 @@ class PoolDetailViewController: UIViewController {
             let topOff = String(format: "%.0f", topDiscount) + "%"
             joinPoolButton.setTitle("Join Pool & Save \(topOff)", for: .normal)
         }
+        
+        joinPoolButton.clipsToBounds = false
+        joinPoolButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.16).cgColor
+        joinPoolButton.layer.shadowOffset = CGSize(width: 0, height: 8)
+        joinPoolButton.layer.shadowOpacity = 1
+        joinPoolButton.layer.shadowRadius = 8
+        
+        overlayView = createOverlayView()
+    }
+    
+    func addOverlay(_ overlayView: UIView) {
+        view.addSubview(overlayView)
+    }
+    
+    func showNavigationBar() {
+        navigationController?.navigationBar.layer.zPosition = 1
+        navigationController?.navigationBar.isUserInteractionEnabled = true
+        navigationController?.navigationBar.isTranslucent = false
+    }
+    
+    func hideNavigationBar() {
+        navigationController?.navigationBar.layer.zPosition = -1
+        navigationController?.navigationBar.isUserInteractionEnabled = false
+        navigationController?.navigationBar.isTranslucent = true
     }
     
     @IBAction func joinPool(_ sender: UIButton) {
+        if let overlayView = overlayView {
+            hideNavigationBar()
+            addOverlay(overlayView)
+        }
+        
         showQuantityView()
     }
     
@@ -67,8 +97,17 @@ class PoolDetailViewController: UIViewController {
         let quantityView = UpdateQuantityView.loadFromNibNamed("UpdateQuantityView", bundle: Bundle(for: self.classForCoder)) as! UpdateQuantityView
         quantityView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         quantityView.delegate = self
-        paymentView.addSubview(quantityView)
+        paymentView.addSubviewAndScale(quantityView)
         return quantityView
+    }
+    
+    func createOverlayView() -> UIView {
+        let overlayView = UIView(frame: UIScreen.main.bounds)
+        overlayView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(close))
+        overlayView.addGestureRecognizer(tapGesture)
+        return overlayView
     }
     
     func showQuantityView() {
@@ -84,7 +123,10 @@ class PoolDetailViewController: UIViewController {
 
 // MARK: -
 extension PoolDetailViewController: QuantityDelegate {
-    func close() {
+    @objc func close() {
+        overlayView?.removeFromSuperview()
+        showNavigationBar()
+        
         UIView.animate(withDuration: 0.2, animations: {
             self.paymentView.transform = CGAffineTransform(translationX: 0, y: +self.paymentView.frame.height)
         }, completion: { completed in
@@ -97,6 +139,8 @@ extension PoolDetailViewController: QuantityDelegate {
         let checkoutController = checkoutStoryboard.instantiateViewController(withIdentifier: "CheckoutView") as! CheckoutViewController
         checkoutController.pool = pool
         checkoutController.quantity = quantity
+        showNavigationBar()
+        
         navigationController?.pushViewController(checkoutController, animated: true)
     }
 }
