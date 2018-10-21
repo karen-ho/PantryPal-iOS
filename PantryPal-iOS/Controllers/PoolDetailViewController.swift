@@ -14,6 +14,7 @@ class PoolDetailViewController: UIViewController {
     @IBOutlet weak var pluImage: UIImageView!
     @IBOutlet weak var pluNameLabel: UILabel!
     @IBOutlet weak var pluDefaultPriceLabel: UILabel!
+    @IBOutlet weak var paymentView: UIView!
     
     var pool: PoolResource!
     
@@ -28,6 +29,12 @@ class PoolDetailViewController: UIViewController {
         pluDefaultPriceLabel.text = "Reg \(pool.getDefaultPrice().asLocaleCurrency)"
         
         quantityView = createQuantityView()
+        
+        paymentView.clipsToBounds = false
+        paymentView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.16).cgColor
+        paymentView.layer.shadowOffset = CGSize(width: 0, height: 20)
+        paymentView.layer.shadowOpacity = 1
+        paymentView.layer.shadowRadius = 20
     }
     
     @IBAction func joinPool(_ sender: UIButton) {
@@ -37,18 +44,29 @@ class PoolDetailViewController: UIViewController {
     func createQuantityView() -> UpdateQuantityView {
         let quantityView = UpdateQuantityView.loadFromNibNamed("UpdateQuantityView", bundle: Bundle(for: self.classForCoder)) as! UpdateQuantityView
         quantityView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.addSubview(quantityView)
+        quantityView.delegate = self
+        paymentView.addSubview(quantityView)
         return quantityView
     }
     
     func showQuantityView() {
-        if let quantityView = quantityView {
-            view.bringSubviewToFront(quantityView)
-            
-            quantityView.transform = CGAffineTransform(translationX: 0, y: quantityView.frame.height)
-            UIView.animate(withDuration: 0.2, animations: {
-                quantityView.transform = CGAffineTransform(translationX: 0, y: 0)
-            })
-        }
+        view.bringSubviewToFront(paymentView)
+
+        paymentView.transform = CGAffineTransform(translationX: 0, y: paymentView.frame.height)
+        paymentView.isHidden = false
+        UIView.animate(withDuration: 0.2, animations: {
+            self.paymentView.transform = CGAffineTransform(translationX: 0, y: 0)
+        })
+    }
+}
+
+// MARK: -
+extension PoolDetailViewController: QuantityDelegate {
+    func close() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.paymentView.transform = CGAffineTransform(translationX: 0, y: +self.paymentView.frame.height)
+        }, completion: { completed in
+            self.paymentView.isHidden = true
+        })
     }
 }

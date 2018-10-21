@@ -21,7 +21,7 @@
                     <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRS-WF-aii">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRS-WF-aii">
                     <rect key="frame" x="171" y="118" width="48" height="29"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="48" id="TBG-G4-f8n"/>
@@ -41,6 +41,9 @@
                     <state key="normal" title="-">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="removeQuantity:" destination="slh-XW-tcv" eventType="touchUpInside" id="fId-Tj-nfA"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRh-He-pJt">
                     <rect key="frame" x="251" y="104.5" width="56" height="56"/>
@@ -53,6 +56,9 @@
                     <state key="normal" title="+">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="addQuantity:" destination="slh-XW-tcv" eventType="touchUpInside" id="vUc-pM-Hab"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdO-Ls-bWT">
                     <rect key="frame" x="0.0" y="238" width="390" height="44"/>
@@ -75,6 +81,9 @@
                     <state key="normal" title="x">
                         <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="close:" destination="slh-XW-tcv" eventType="touchUpInside" id="VyM-br-7gg"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -98,6 +107,7 @@
             <connections>
                 <outlet property="addQuantityButton" destination="lRh-He-pJt" id="JVl-Ia-la2"/>
                 <outlet property="minusQuantityButton" destination="c0p-Qp-e0B" id="L6G-V4-EXJ"/>
+                <outlet property="quantityLabel" destination="aRS-WF-aii" id="kZx-5f-DZj"/>
             </connections>
             <point key="canvasLocation" x="188.80000000000001" y="-644.07796101949032"/>
         </view>
