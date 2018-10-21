@@ -19,7 +19,7 @@ class StoreViewController: UIViewController {
     let poolApi = PoolApi.sharedInstance
     
     var pools: [PoolResource] = []
-    let rowHeight: CGFloat = 180.0
+    let rowHeight: CGFloat = 200.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,9 +69,17 @@ extension StoreViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "pool") as! PoolCell
+        cell.isSearch = true
         let pool = pools[indexPath.row]
         cell.setPool(pool, index: indexPath.row)
         cell.selectionStyle = .none
         return cell
+    }
+}
+
+// MARK: - UISearchBarDelegate
+extension StoreViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }

@@ -28,6 +28,7 @@ class PoolCell: UITableViewCell {
     
     var delegate: PoolDelegate?
     var pool: PoolResource?
+    var isSearch: Bool = false
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -72,6 +73,9 @@ class PoolCell: UITableViewCell {
                 pickUpLabel.text = "Pick up in 1 Day"
             }
         }
+        
+        orderDetailsButton.isHidden = isSearch
+        cancelOrderButton.isHidden = isSearch
     }
     
     @IBAction func goToOrder(_ sender: UIButton) {
