@@ -28,6 +28,7 @@ class CheckoutViewController: UIViewController {
     
     var pool: PoolResource!
     var quantity: Int = 1
+    let poolApi = PoolApi.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,6 +99,27 @@ class CheckoutViewController: UIViewController {
         navigationController?.navigationBar.isUserInteractionEnabled = true
         navigationController?.navigationBar.isTranslucent = false
     }
+    
+    @IBAction func paypal(_ sender: UIButton) {
+        completePurchase()
+    }
+    
+    func completePurchase() {
+        let loadingView = LoadingView.createLoadingView(text: "Processing Payment...")
+        UIApplication.shared.keyWindow?.addSubview(loadingView)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+            self.poolApi.joinPool(id: self.pool.id, userId: NSUUID().uuidString, unit: self.quantity) { (success) in
+                let orderStoryboard = UIStoryboard(name: "Order", bundle: Bundle(for: self.classForCoder))
+                let orderController = orderStoryboard.instantiateViewController(withIdentifier: "OrderView") as! OrderViewController
+                orderController.pool = self.pool
+                orderController.quantity = self.quantity
+                loadingView.removeFromSuperview()
+                
+                self.present(orderController, animated: true, completion: nil)
+            }
+        }
+    }
 }
 
 // MARK: - UICollectionViewDelegate
@@ -109,6 +131,10 @@ extension CheckoutViewController: UICollectionViewDelegate {
 extension CheckoutViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 100.0, height: 140.0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        completePurchase()
     }
 }
 

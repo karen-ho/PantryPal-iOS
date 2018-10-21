@@ -50,6 +50,8 @@
 		9C605D2A217C45200000C100 /* ProductDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C605D29217C45200000C100 /* ProductDetailCell.swift */; };
 		9C605D2C217C4E280000C100 /* UIColor+Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C605D2B217C4E280000C100 /* UIColor+Basic.swift */; };
 		9CC97CB9217C75950013FDA0 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC97CB8217C75950013FDA0 /* Order.storyboard */; };
+		9CC97CBB217C819D0013FDA0 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC97CBA217C819D0013FDA0 /* OrderViewController.swift */; };
+		9CC97CBD217C88270013FDA0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC97CBC217C88270013FDA0 /* LoadingView.swift */; };
 		D34106F41ADD8D5529FD2B34 /* Pods_PantryPal_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4A494E77B131306C984425 /* Pods_PantryPal_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +126,8 @@
 		9C605D29217C45200000C100 /* ProductDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCell.swift; sourceTree = "<group>"; };
 		9C605D2B217C4E280000C100 /* UIColor+Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Basic.swift"; sourceTree = "<group>"; };
 		9CC97CB8217C75950013FDA0 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
+		9CC97CBA217C819D0013FDA0 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		9CC97CBC217C88270013FDA0 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		AAEA73141911CBF70A982D9C /* Pods_PantryPal_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PantryPal_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23F568A88D0D079B58DC933 /* Pods_PantryPal_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PantryPal_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E73704F0551A8B4B01773501 /* Pods-PantryPal-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantryPal-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PantryPal-iOSTests/Pods-PantryPal-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -289,6 +293,7 @@
 			children = (
 				9C605CF9217BD2400000C100 /* HomeViewController.swift */,
 				9C605D25217C30DD0000C100 /* PaymentCell.swift */,
+				9CC97CBA217C819D0013FDA0 /* OrderViewController.swift */,
 				9C605D21217C25C50000C100 /* CheckoutViewController.swift */,
 				9C249E84217BA88D00121E50 /* MainViewController.swift */,
 				9C605D13217C0BFE0000C100 /* PoolCell.swift */,
@@ -306,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				9C605CEF217BC7E20000C100 /* Debouncer.swift */,
+				9CC97CBC217C88270013FDA0 /* LoadingView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -568,6 +574,7 @@
 				9C605D2C217C4E280000C100 /* UIColor+Basic.swift in Sources */,
 				9C605D02217BDBC40000C100 /* PoolDetailViewController.swift in Sources */,
 				9C605D1C217C1F010000C100 /* UIView+Nib.swift in Sources */,
+				9CC97CBD217C88270013FDA0 /* LoadingView.swift in Sources */,
 				9C605CF0217BC7E20000C100 /* Debouncer.swift in Sources */,
 				9C249E85217BA88D00121E50 /* MainViewController.swift in Sources */,
 				9C605CE5217BB0E00000C100 /* Config.swift in Sources */,
@@ -578,6 +585,7 @@
 				9C605CEA217BB76C0000C100 /* Response+Marshal.swift in Sources */,
 				9C249E83217BA88D00121E50 /* AppDelegate.swift in Sources */,
 				9C605D14217C0BFE0000C100 /* PoolCell.swift in Sources */,
+				9CC97CBB217C819D0013FDA0 /* OrderViewController.swift in Sources */,
 				9C249EB5217BAAF200121E50 /* PantryPalApi.swift in Sources */,
 				9C605CFA217BD2400000C100 /* HomeViewController.swift in Sources */,
 				9C605CE7217BB1890000C100 /* PoolResource.swift in Sources */,
