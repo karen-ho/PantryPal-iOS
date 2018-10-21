@@ -48,6 +48,7 @@
 		9C605D26217C30DD0000C100 /* PaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C605D25217C30DD0000C100 /* PaymentCell.swift */; };
 		9C605D28217C3DD20000C100 /* ProductDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C605D27217C3DD20000C100 /* ProductDetailCell.xib */; };
 		9C605D2A217C45200000C100 /* ProductDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C605D29217C45200000C100 /* ProductDetailCell.swift */; };
+		9C605D2C217C4E280000C100 /* UIColor+Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C605D2B217C4E280000C100 /* UIColor+Basic.swift */; };
 		D34106F41ADD8D5529FD2B34 /* Pods_PantryPal_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4A494E77B131306C984425 /* Pods_PantryPal_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +121,7 @@
 		9C605D25217C30DD0000C100 /* PaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCell.swift; sourceTree = "<group>"; };
 		9C605D27217C3DD20000C100 /* ProductDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailCell.xib; sourceTree = "<group>"; };
 		9C605D29217C45200000C100 /* ProductDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCell.swift; sourceTree = "<group>"; };
+		9C605D2B217C4E280000C100 /* UIColor+Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Basic.swift"; sourceTree = "<group>"; };
 		AAEA73141911CBF70A982D9C /* Pods_PantryPal_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PantryPal_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23F568A88D0D079B58DC933 /* Pods_PantryPal_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PantryPal_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E73704F0551A8B4B01773501 /* Pods-PantryPal-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantryPal-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PantryPal-iOSTests/Pods-PantryPal-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				9C605CE9217BB76C0000C100 /* Response+Marshal.swift */,
+				9C605D2B217C4E280000C100 /* UIColor+Basic.swift */,
 				9C605D1B217C1F010000C100 /* UIView+Nib.swift */,
 				9C605D15217C10280000C100 /* Double+Currency.swift */,
 				9C605CF7217BD0FE0000C100 /* UIImage+Asset.swift */,
@@ -558,6 +561,7 @@
 				9C605D0E217C09580000C100 /* SettingViewController.swift in Sources */,
 				9C605D26217C30DD0000C100 /* PaymentCell.swift in Sources */,
 				9C605CF8217BD0FE0000C100 /* UIImage+Asset.swift in Sources */,
+				9C605D2C217C4E280000C100 /* UIColor+Basic.swift in Sources */,
 				9C605D02217BDBC40000C100 /* PoolDetailViewController.swift in Sources */,
 				9C605D1C217C1F010000C100 /* UIView+Nib.swift in Sources */,
 				9C605CF0217BC7E20000C100 /* Debouncer.swift in Sources */,

@@ -14,7 +14,7 @@ class PoolDetailViewController: UIViewController {
     @IBOutlet weak var paymentView: UIView!
     @IBOutlet weak var productTable: UITableView!
     
-    var rowHeight: CGFloat = 750.0
+    var rowHeight: CGFloat = 770.0
     
     var pool: PoolResource!
     
@@ -93,6 +93,7 @@ extension PoolDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productDetail") as! ProductDetailCell
         cell.setProduct(pool: pool)
+        cell.selectionStyle = .none
         return cell
     }
 }
