@@ -54,8 +54,8 @@ class PoolApi {
         }
     }
     
-    func joinPool(id: String, userId: String, unit: Int, completion: @escaping (Bool) -> Void) {
-        provider.request(.joinPool(id: id, userId: userId, unit: unit)) { result in
+    func joinPool(id: String, userId: String, unit: Int, paymentType: String, completion: @escaping (Bool) -> Void) {
+        provider.request(.joinPool(id: id, userId: userId, unit: unit, paymentType: paymentType)) { result in
             switch result {
             case .success:
                 completion(true)
@@ -66,8 +66,8 @@ class PoolApi {
         }
     }
     
-    func leavePool(id: String, userId: String, unit: Int, completion: @escaping (Bool) -> Void) {
-        provider.request(.leavePool(id: id, userId: userId, unit: unit)) { result in
+    func leavePool(id: String, userId: String, unit: Int, paymentType: String, completion: @escaping (Bool) -> Void) {
+        provider.request(.leavePool(id: id, userId: userId, unit: unit, paymentType: paymentType)) { result in
             switch result {
             case .success:
                 completion(true)

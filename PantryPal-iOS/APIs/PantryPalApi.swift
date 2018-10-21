@@ -13,8 +13,8 @@ enum PantryPalApi {
     // pools
     case getPools(latitude: Double, longitude: Double)
     case getPool(id: String)
-    case joinPool(id: String, userId: String, unit: Int)
-    case leavePool(id: String, userId: String, unit: Int)
+    case joinPool(id: String, userId: String, unit: Int, paymentType: String)
+    case leavePool(id: String, userId: String, unit: Int, paymentType: String)
 }
 
 extension PantryPalApi: TargetType {
@@ -26,9 +26,9 @@ extension PantryPalApi: TargetType {
             return "/pools"
         case .getPool(let id):
             return "/pools/\(id)"
-        case .joinPool(let id, let userId, _):
+        case .joinPool(let id, let userId, _, _):
             return "/pools/\(id)/users/\(userId)"
-        case .leavePool(let id, let userId, _):
+        case .leavePool(let id, let userId, _, _):
             return "/pools/\(id)/users/\(userId)"
         }
     }
@@ -52,10 +52,10 @@ extension PantryPalApi: TargetType {
             return .requestParameters(parameters: ["latitude": latitude, "longitude": longitude], encoding: URLEncoding.queryString)
         case .getPool:
             return .requestPlain
-        case .joinPool(_, _, let unit):
-            return .requestParameters(parameters: ["unit": unit], encoding: JSONEncoding.default)
-        case .leavePool(_, _, let unit):
-            return .requestParameters(parameters: ["unit": unit], encoding: JSONEncoding.default)
+        case .joinPool(_, _, let unit, let paymentType):
+            return .requestParameters(parameters: ["units": unit, "paymentType": paymentType], encoding: JSONEncoding.default)
+        case .leavePool(_, _, let unit, let paymentType):
+            return .requestParameters(parameters: ["units": unit, "paymentType": paymentType], encoding: JSONEncoding.default)
         }
     }
     

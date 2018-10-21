@@ -101,15 +101,21 @@ class CheckoutViewController: UIViewController {
     }
     
     @IBAction func paypal(_ sender: UIButton) {
-        completePurchase()
+        completePurchase("PAYPAL")
     }
     
-    func completePurchase() {
+    func completePurchase(_ paymentType: String) {
         let loadingView = LoadingView.createLoadingView(text: "Processing Payment...")
         UIApplication.shared.keyWindow?.addSubview(loadingView)
         
+        if COUNT == 0 {
+            COUNT = 1
+        } else {
+            COUNT = 0
+        }
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-            self.poolApi.joinPool(id: self.pool.id, userId: NSUUID().uuidString, unit: self.quantity) { (success) in
+            self.poolApi.joinPool(id: self.pool.id, userId: NSUUID().uuidString, unit: self.quantity, paymentType: paymentType) { (success) in
                 let orderStoryboard = UIStoryboard(name: "Order", bundle: Bundle(for: self.classForCoder))
                 let orderController = orderStoryboard.instantiateViewController(withIdentifier: "OrderView") as! OrderViewController
                 orderController.pool = self.pool
@@ -134,7 +140,7 @@ extension CheckoutViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        completePurchase()
+        completePurchase("VISA")
     }
 }
 

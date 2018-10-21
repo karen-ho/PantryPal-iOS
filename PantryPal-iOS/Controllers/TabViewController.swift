@@ -19,7 +19,7 @@ class TabViewController: UITabBarController {
         let homeStoryboard = UIStoryboard(name: "Home", bundle: Bundle(for: self.classForCoder))
         let homeController = homeStoryboard.instantiateViewController(withIdentifier: "HomeView") as! HomeViewController
         let homeNavController = UINavigationController(rootViewController: homeController)
-        homeNavController.tabBarItem = UITabBarItem(title: "My Pools", image: UIImage(assetIdentifier: .shop), selectedImage: UIImage(assetIdentifier: .shop))
+        homeNavController.tabBarItem = UITabBarItem(title: "My Pools", image: UIImage(assetIdentifier: .pools), selectedImage: UIImage(assetIdentifier: .pools))
         
         let searchStoryboard = UIStoryboard(name: "Search", bundle: Bundle(for: self.classForCoder))
         let searchController = searchStoryboard.instantiateViewController(withIdentifier: "SearchView") as! SearchViewController

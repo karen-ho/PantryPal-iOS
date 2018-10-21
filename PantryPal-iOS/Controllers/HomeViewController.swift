@@ -10,8 +10,15 @@ import Foundation
 import CoreLocation
 import UIKit
 
+var COUNT = 0
+
 class HomeViewController: UIViewController {
     @IBOutlet weak var poolTable: UITableView!
+    @IBOutlet weak var pickUpView: UIView!
+    @IBOutlet weak var pickUpImage: UIImageView!
+    @IBOutlet weak var pickUpLabel: UILabel!
+    @IBOutlet weak var poolCountLabel: UILabel!
+    @IBOutlet weak var sortLabel: UILabel!
     
     let locationManager: CLLocationManager = CLLocationManager()
     
@@ -37,6 +44,23 @@ class HomeViewController: UIViewController {
         
         let poolNib = UINib(nibName: "PoolCell", bundle: Bundle(for: self.classForCoder))
         poolTable.register(poolNib, forCellReuseIdentifier: "pool")
+        
+        pickUpView.layer.cornerRadius = 4.0
+        
+        if COUNT == 0 {
+            pickUpImage.isHidden = true
+            pickUpLabel.text = "Next pickup is in 1 day"
+        } else {
+            pickUpImage.isHidden = false
+            pickUpLabel.text = "1 Pool is ready for pickup"
+        }
+        
+        let text = "Sort by pickup date"
+        let textRange = NSMakeRange(0, text.count)
+        let attributedText = NSMutableAttributedString(string: text)
+        attributedText.addAttribute(NSAttributedString.Key.underlineStyle , value: NSUnderlineStyle.single.rawValue, range: textRange)
+        // Add other attributes if needed
+        sortLabel.attributedText = attributedText
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,6 +75,7 @@ class HomeViewController: UIViewController {
         
         poolApi.getPools(latitude: latitude, longitude: longitude) { (pools) in
             self.pools = pools
+            self.poolCountLabel.text = "\(pools.count) pools"
             self.poolTable.reloadData()
         }
     }

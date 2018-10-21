@@ -19,6 +19,7 @@ extension UIImage {
         case americanexpress
         case wallet
         case shop
+        case pools
     }
     
     convenience init!(assetIdentifier: AssetIdentifier) {
