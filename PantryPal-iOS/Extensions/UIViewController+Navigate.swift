@@ -14,5 +14,6 @@ extension UIViewController {
         let tabStoryboard = UIStoryboard(name: "Tab", bundle: Bundle(for: self.classForCoder))
         let tabController = tabStoryboard.instantiateViewController(withIdentifier: "TabView") as! TabViewController
         UIApplication.shared.keyWindow?.rootViewController = tabController
+        tabController.selectedIndex = 1
     }
 }

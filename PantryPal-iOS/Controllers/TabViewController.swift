@@ -15,6 +15,11 @@ class TabViewController: UITabBarController {
         super.viewDidLoad()
         
         self.delegate = self
+        
+        let storeStoryboard = UIStoryboard(name: "Store", bundle: Bundle(for: self.classForCoder))
+        let storeController = storeStoryboard.instantiateViewController(withIdentifier: "StoreView") as!StoreViewController
+        let storeNavController = UINavigationController(rootViewController: storeController)
+        storeNavController.tabBarItem = UITabBarItem(title: "Store", image: UIImage(assetIdentifier: .shop), selectedImage: UIImage(assetIdentifier: .shop))
 
         let homeStoryboard = UIStoryboard(name: "Home", bundle: Bundle(for: self.classForCoder))
         let homeController = homeStoryboard.instantiateViewController(withIdentifier: "HomeView") as! HomeViewController
@@ -31,7 +36,7 @@ class TabViewController: UITabBarController {
         let settingNavController = UINavigationController(rootViewController: settingController)
         settingNavController.tabBarItem = UITabBarItem(title: "Account", image: UIImage(assetIdentifier: .account), selectedImage: UIImage(assetIdentifier: .account))
         
-        viewControllers = [homeNavController, searchNavController, settingNavController]
+        viewControllers = [storeNavController, homeNavController, searchNavController, settingNavController]
     }
 }
 

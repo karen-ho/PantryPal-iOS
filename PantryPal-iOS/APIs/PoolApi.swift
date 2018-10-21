@@ -77,4 +77,22 @@ class PoolApi {
             }
         }
     }
+    
+    func searchPool(searchTerm: String, completion: @escaping ([PoolResource]) -> Void) {
+        provider.request(.searchPool(searchTerm: searchTerm)) { result in
+            switch result {
+            case let .success(response):
+                do {
+                    let result = try response.mapArray(of: PoolResource.self)
+                    completion(result)
+                } catch {
+                    print("ERROR: \(error)")
+                    completion([])
+                }
+            case let .failure(error):
+                print("ERROR: \(error)")
+                completion([])
+            }
+        }
+    }
 }
