@@ -169,7 +169,21 @@ extension HomeViewController: UITableViewDataSource {
         let pool = pools[indexPath.row]
         cell.setPool(pool, index: indexPath.row)
         cell.selectionStyle = .none
+        cell.delegate = self
         return cell
     }
 
+}
+
+// MARK: - PoolDelegate
+extension HomeViewController: PoolDelegate {
+    func goToOrder(pool: PoolResource, quantity: Int) {
+        let orderStoryboard = UIStoryboard(name: "Order", bundle: Bundle(for: self.classForCoder))
+        let orderController = orderStoryboard.instantiateViewController(withIdentifier: "OrderView") as! OrderViewController
+        orderController.pool = pool
+        orderController.quantity = quantity
+        orderController.hidesBottomBarWhenPushed = true
+        orderController.showConfirmation = true
+        navigationController?.pushViewController(orderController, animated: true)
+    }
 }

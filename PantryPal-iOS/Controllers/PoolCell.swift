@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 import Kingfisher
 
+protocol PoolDelegate {
+    func goToOrder(pool: PoolResource, quantity: Int)
+}
+
 class PoolCell: UITableViewCell {
     @IBOutlet weak var pluNameLabel: UILabel!
     @IBOutlet weak var pluImage: UIImageView!
@@ -21,6 +25,9 @@ class PoolCell: UITableViewCell {
     @IBOutlet weak var cancelOrderButton: UIButton!
     @IBOutlet weak var pickUpImage: UIImageView!
     @IBOutlet weak var pickUpLabel: UILabel!
+    
+    var delegate: PoolDelegate?
+    var pool: PoolResource?
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -37,6 +44,8 @@ class PoolCell: UITableViewCell {
         let url = URL(string: pool.pluImage)
         pluImage.kf.setImage(with: url)
         priceLabel.text = pool.getPrice().asLocaleCurrency
+        
+        self.pool = pool
         
         regularPriceLabel.text =
             "Reg. \(pool.getDefaultPrice().asLocaleCurrency)"
@@ -62,6 +71,12 @@ class PoolCell: UITableViewCell {
             } else {
                 pickUpLabel.text = "Pick up in 1 Day"
             }
+        }
+    }
+    
+    @IBAction func goToOrder(_ sender: UIButton) {
+        if let pool = pool {
+            delegate?.goToOrder(pool: pool, quantity: 1)
         }
     }
 }

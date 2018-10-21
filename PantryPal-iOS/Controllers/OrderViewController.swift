@@ -24,14 +24,24 @@ class OrderViewController: UIViewController {
     @IBOutlet weak var productView: UIView!
     @IBOutlet weak var returnButton: UIButton!
     
+    @IBOutlet weak var congratsLabel: UILabel!
+    @IBOutlet weak var starImageView: UIImageView!
+    @IBOutlet weak var smallConfirmation: UILabel!
+    
+    @IBOutlet weak var largeConfirmation: UILabel!
+    @IBOutlet weak var orderDetailsLabel: UILabel!
+    @IBOutlet weak var largeConfirmationNumber: UILabel!
+    
     var number: Int = Int.random(in: 10000 ... 99999)
     var pool: PoolResource!
     var quantity: Int = 1
+    var showConfirmation: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         confirmationNumberLabel.text = "#\(number)"
+        largeConfirmationNumber.text = "#\(number)"
         
         let text = "123 Main St."
         let textRange = NSMakeRange(0, text.count)
@@ -95,6 +105,14 @@ class OrderViewController: UIViewController {
         returnButton.layer.shadowOffset = CGSize(width: 0, height: 8)
         returnButton.layer.shadowOpacity = 1
         returnButton.layer.shadowRadius = 8
+        
+        congratsLabel.isHidden = showConfirmation
+        starImageView.isHidden = showConfirmation
+        smallConfirmation.isHidden = showConfirmation
+        largeConfirmation.isHidden = !showConfirmation
+        confirmationNumberLabel.isHidden = showConfirmation
+        orderDetailsLabel.isHidden = !showConfirmation
+        largeConfirmationNumber.isHidden = !showConfirmation
     }
     
     override func viewDidAppear(_ animated: Bool) {
